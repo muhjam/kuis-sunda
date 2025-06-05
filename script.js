@@ -1,52 +1,64 @@
 // Quiz Questions
 const questions = [
     {
-        question: "Ti mana asal muasal tahu bulat nu ayeuna sumebar ka mana-mana?",
-        options: ["Bandung", "Cirebon", "Garut", "Kuningan"],
-        answer: 2,
-        explanation: "Tahu bulat asalna ti Garut, Jawa Barat, sarta sumebar ka sabudeureun Indonésia."
+        question: "Tina mana asal usul tahu bulat?",
+        options: ["Jawa Barat", "Jawa Tengah", "Jawa Timur", "Sumatera Barat"],
+        answer: 0,
+        explanation: "Tahu bulat asalna ti Jawa Barat sarta jadi jajanan khas Sunda anu populer."
     },
     {
-        question: "Tahu bulat biasana digoreng dina kaayaan...",
-        options: ["Tiis", "Satengah asak", "Asak tuluy dijieun keripik", "Panas kénéh, langsung saatos di pesen"],
+        question: "Naon bahan dasar pembuatan tahu bulat?",
+        options: ["Tahu putih", "Tahu sumedang", "Tahu pong", "Tahu kuning"],
+        answer: 2,
+        explanation: "Tahu bulat biasana dijieun tina tahu pong anu geus dihaleuskeun sarta diaduk nepi ka kalis."
+    },
+    {
+        question: "Kumaha cara nyieun tahu bulat anu bener?",
+        options: ["Digoreng langsung", "Dikukus heula", "Dibakar heula", "Dihaluskeun heula sarta dibuleudkeun"],
         answer: 3,
-        explanation: "Salah sahiji ciri has tina tahu bulat nyaéta digoréng langsung saatos dipésén supaya tetep panas sarta garing di luar tapi empuk di jero."
+        explanation: "Tahu bulat dijieun ku cara dihaleuskeun heula, dibuleudkeun, tuluy digoreng nepi ka garing."
     },
     {
-        question: "Naon anu ngajadikeun rasa jeung tekstur tahu bulat béda jeung tahu biasa?",
-        options: ["Digoreng ku minyak samin", "Dijieun tina campuran kacang tanah", "Dihaluskeun, didiuk heula, tuluy dibulakeun", "Dimekarkeun ku bahan pengembang khusus"],
-        answer: 2,
-        explanation: "Tahu bulat dijieun tina tahu anu dihaleuskeun, didiuk heula, tuluy dibuleudkeun saacan digoréng, anu ngahasilkeun tekstur has anu béda jeung tahu biasa."
-    },
-    {
-        question: "Tahu bulat mimiti jadi populér sabudeureun taun...",
-        options: ["2000", "2005", "2010", "2015"],
-        answer: 3,
-        explanation: "Tahu bulat mimiti populer di taun 2015 nalika lagu 'Tahu Bulat' viral di média sosial."
-    },
-    {
-        question: "Salah sahiji ciri has tina padagang tahu bulat nyaéta...",
-        options: ["Ngagunakeun obrog-obrog", "Ngagunakeun sora panggero tina speaker mobil", "Ngagorowok ti motor", "Ngajual di sisi situ"],
+        question: "Saha nu ngawanohkeun tahu bulat munggaran?",
+        options: ["Asep", "Dani Firmansyah", "Kang Asep", "Ente Sutisna"],
         answer: 1,
-        explanation: "Padagang tahu bulat kaceluk ku sora panggero anu diputér tina spéker mobil, anu mindeng ngandung promosi kreatif ngeunaan daganganna."
+        explanation: "Dani Firmansyah mangrupikeun tokoh anu ngawanohkeun tahu bulat ka masarakat luas ngaliwatan lagu viralna."
     },
     {
-        question: "Sora panggero padagang tahu bulat biasana eusina...",
-        options: ["Nyeritakeun sajarah tahu", "Nyaritakeun resep masakan", "Promosi harga jeung cara ngolah", "Ngajak balanja jeung ngajangjikeun diskon"],
+        question: "Naon ngaran lagu anu ngajadikeun tahu bulat jadi populer?",
+        options: ["Tahu Bulat", "Juragan Tahu", "Tahu Bulatku", "Tahu Bulat Viral"],
+        answer: 0,
+        explanation: "Lagu 'Tahu Bulat' anu dinyanyikeun ku Dani Firmansyah ngajadikeun tahu bulat jadi populer di masarakat."
+    },
+    {
+        question: "Kumaha ciri has sora panggero padagang tahu bulat?",
+        options: ["Nyaring", "Lembut", "Khas ngagorowok", "Nyanyi-nyanyi"],
         answer: 2,
-        explanation: "Sora panggero biasana ngandung promosi harga, kualitas, jeung cara ngolah tahu bulat anu dijualna."
+        explanation: "Padagang tahu bulat kaceluk ku sora panggerona anu khas ngagorowok ngagambarkeun daganganna."
     },
     {
-        question: "Dina kaulinan mobile 'Tahu Bulat', nu jadi tujuan utama pamaén téh...",
-        options: ["Miceun tahu nu rusak", "Ngalatih koki jeung juru goreng", "Ngumpulkeun duit tina jualan tahu bulat", "Nyieun tahu rasa keju"],
+        question: "Dina taun sabaraha lagu Tahu Bulat viral?",
+        options: ["2013", "2014", "2015", "2016"],
         answer: 2,
-        explanation: "Kaulinan 'Tahu Bulat' ngeunaan cara ngumpulkeun duit tina hasil jualan tahu bulat anu digoréng ku pamaén."
+        explanation: "Lagu Tahu Bulat viral dina taun 2015 sarta ngajadikeun jajanan ieu langkung populer deui."
     },
     {
-        question: "Naha disebutna 'tahu bulat'?",
-        options: ["Sabab warnana buleud", "Sabab digoreng buleud-buleud", "Sabab dijieun di wewengkon Bulat", "Sabab ku rasa anu bulat (sempurna)"],
-        answer: 1,
-        explanation: "Ngaran 'tahu bulat' dicokot tina bentukna anu buleud-buleud nalika digoréng, anu mangrupa ciri has tina kadaharan ieu."
+        question: "Naon ngaran kaulinan mobile anu ngangkat tema tahu bulat?",
+        options: ["Tahu Bulat Mania", "Tahu Bulatku", "Tahu Bulat Viral", "Tahu Bulat: The Game"],
+        answer: 0,
+        explanation: "Kaulinan mobile 'Tahu Bulat Mania' mangrupikeun kaulinan anu ngangkat tema jualan tahu bulat."
+    },
+    {
+        question: "Sabaraha harga standar tahu bulat per bijina?",
+        options: ["Rp 500", "Rp 1.000", "Rp 2.000", "Rp 5.000"],
+        answer: 0,
+        explanation: "Harga standar tahu bulat biasana dijual dina harga Rp 500 per biji, tapi bisa béda-béda gumantung kana lokasi."
+    },
+    {
+        question: "Kumaha cara ngajaga kerenyahan tahu bulat?",
+        options: ["Disimpen dina wadah kedap udara", "Dikukus deui", "Digoreng deui", "Dilempeukkeun"],
+        answer: 2,
+        explanation: "Pikeun ngajaga kerenyahan, tahu bulat bisa digoreng deui sakedap sateuacan didahar."
     },
     {
         question: "Salah sahiji alesan kunaon tahu bulat loba nu resep nyaéta...",
@@ -231,13 +243,13 @@ function showResult() {
     
     if (tahuCount === 0) {
         message = 'Hampura, anjeun tacan meunang tahu bulat!';
-        subMessage = 'Hayu cobian deui, siapa nyaho meunangkeun tahu bulat leuwih loba!';
+        subMessage = 'Hayu cobian deui, bisa wae meunangkeun tahu bulat leuwih loba!';
     } else if (tahuCount === 1) {
         message = 'Alus! Anjeun meunangkeun 1 tahu bulat!';
-        subMessage = 'Coba deui, pasti bisa meunangkeun leuwih loba tahu bulat!';
+        subMessage = 'Coba deui, bisa wae meunangkeun leuwih loba tahu bulat!';
     } else if (tahuCount === 2) {
         message = 'Hébat! Anjeun meunangkeun 2 tahu bulat!';
-        subMessage = 'Sakali deui, pasti bisa meunangkeun 3 tahu bulat!';
+        subMessage = 'Sakali deui, bisa wae meunangkeun 3 tahu bulat!';
     } else {
         message = 'Luar biasa! Anjeun meunangkeun 3 tahu bulat!';
         subMessage = 'Pangaweruh anjeun ngeunaan tahu bulat kacida alusna!';
