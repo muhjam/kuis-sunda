@@ -262,6 +262,7 @@ function showResult() {
         <div class="tahu-result">
             ${Array(tahuCount).fill().map(() => `<img src="src/tahu.png" alt="Tahu Bulat" class="tahu-earned">`).join('')}
         </div>
+        <p class="share-text">Poto keun layarna, teras berekeun ka akang teteh kasep garelis anu boga tenan</p>
     `;
 }
 

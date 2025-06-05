@@ -175,12 +175,24 @@ body::before {
 }
 
 .tahu-earned {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    animation: bounce 0.5s ease-in-out;
-    display: inline-block;
-    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    animation: bounce 0.5s ease infinite alternate;
+}
+
+.share-text {
+    margin-top: 20px;
+    font-style: italic;
+    color: var(--secondary);
+    font-size: 0.9em;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @keyframes bounce {
