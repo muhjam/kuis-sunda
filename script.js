@@ -330,16 +330,19 @@ function showResult() {
     // Generate dynamic data
     const now = new Date();
     const pad = n => n.toString().padStart(2, '0');
-    const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+    const days = ['Minggu', 'Senén', 'Salasa', 'Rebo', 'Kemis', 'Jumaah', 'Saptu'];
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
     
     const dayName = days[now.getDay()];
     const dateStr = `${dayName}, ${pad(now.getDate())} ${months[now.getMonth()]} ${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
     
-    const amount = 'Rp Gratis';
+    // Generate random amount between 100 and 10000, then format with dots as thousand separators
+    const randomAmount = Math.floor(Math.random() * 9900) + 100;
+    const formattedAmount = 'Rp ' + randomAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    const amount = formattedAmount;
     const userName = playerName; // Use the player's name
-    const txnNo = `TXN${Math.floor(10000000 + Math.random()*90000000)}`;
-    const rrnNo = `RRN${Math.floor(10000000 + Math.random()*90000000)}`;
+    const txnNo = `IF-A5${Math.floor(10000000 + Math.random()*90000000)}`;
+    const rrnNo = `TAHUBULAT${Math.floor(10 + Math.random()*90)}`;
 
     // Set receipt fields
     document.getElementById('receipt-date').textContent = dateStr;
@@ -354,13 +357,18 @@ function showResult() {
     const checkmark = document.getElementById('checkmark-img');
     const footer = document.getElementById('receipt-footer');
     
+    // The ping animation is now handled by CSS only
+    
     if (allCorrect) {
         statusElem.textContent = 'Berhasil';
         checkCircle.style.background = '#4CAF50'; // Green for success
         checkmark.src = 'src/checked.png';
         checkmark.style.display = 'block';
         checkmark.style.animation = 'checkmark-animation 0.6s ease-in-out';
-        footer.innerHTML = '<span style="color:#4CAF50;font-weight:600;font-size:1.2em">LUNAS</span><br><span style="font-size:0.96em">Buktina berekeun ka akang teteh kasep garelis anu boga tenan.</span>';
+        footer.innerHTML = '<span style="color:#4CAF50;font-weight:600;font-size:1.2em">LUNAS</span><br><span style="font-size:0.96em">Buktina tunjukeun ka akang teteh kasep garelis anu boga tenan.</span>';
+        
+        // Start the heartbeat animation
+        startHeartbeatAnimation();
     } else {
         statusElem.textContent = 'Belum Lunas';
         checkCircle.style.background = '#e74c3c';
