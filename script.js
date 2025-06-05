@@ -256,13 +256,17 @@ function showResult() {
     }
     
     // Update the result message with HTML for better formatting
+    const shareText = tahuCount > 0 ? 
+        '<p class="share-text">Poto keun layarna, teras berekeun ka akang teteh kasep garelis anu boga tenan</p>' : 
+        '';
+        
     resultMessage.innerHTML = `
         <h3>${message}</h3>
         <p>${subMessage}</p>
         <div class="tahu-result">
             ${Array(tahuCount).fill().map(() => `<img src="src/tahu.png" alt="Tahu Bulat" class="tahu-earned">`).join('')}
         </div>
-        <p class="share-text">Poto keun layarna, teras berekeun ka akang teteh kasep garelis anu boga tenan</p>
+        ${shareText}
     `;
 }
 
