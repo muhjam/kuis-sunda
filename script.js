@@ -1,262 +1,64 @@
 // Quiz Questions
 const questions = [
     {
-        question: "Tina mana asal usul tahu bulat?",
-        options: ["Jawa Barat", "Jawa Tengah", "Jawa Timur", "Sumatera Barat"],
-        answer: 0,
-        explanation: "Tahu bulat asalna ti Jawa Barat sarta jadi jajanan khas Sunda anu populer."
-    },
-    {
-        question: "Bahan utama nyieun tahu bulat nyaeta...",
-        options: ["Tahu bodas anu dilemeskeun", "Tahu koneng", "Tahu pong", "Tahu sumedang"],
-        answer: 0,
-        explanation: "Tahu bulat dijieun tina tahu bodas anu dilemeskeun, dibuleudkeun, tuluy digoreng."
-    },
-    {
-        question: "Iraha tahu bulat mimiti populer di Indonesia?",
-        options: ["Taun 1970-an", "Taun 1980-an", "Taun 1990-an", "Taun 2000-an"],
-        answer: 3,
-        explanation: "Tahu bulat mimiti populer dina awal taun 2000-an."
-    },
-    {
-        question: "Naon ngaran lian tina tahu bulat?",
-        options: ["Tahu aci", "Tahu jeletot", "Tahu bulat goreng", "Tahu isi"],
+        question: "Ti mana asal muasal tahu bulat nu ayeuna sumebar ka mana-mana?",
+        options: ["Bandung", "Cirebon", "Garut", "Kuningan"],
         answer: 2,
-        explanation: "Tahu bulat sok disebut ogé ku ngaran tahu bulat goreng."
+        explanation: "Tahu bulat asalna ti Garut, Jawa Barat, sarta sumebar ka sabudeureun Indonésia."
     },
     {
-        question: "Kumaha cara ngadon tahu bulat supaya garing di luar tapi empuk di jero?",
-        options: ["Digoreng dina suhu tinggi", "Ditambahan cai jeruk nipis", "Dikukus heula samenggem", "Dikocok samenggem"],
-        answer: 0,
-        explanation: "Pikeun meunangkeun tekstur garing di luar tapi empuk di jero, tahu bulat kudu digoreng dina suhu anu cukup luhur."
+        question: "Tahu bulat biasana digoreng dina kaayaan...",
+        options: ["Tiis", "Satengah asak", "Asak tuluy dijieun keripik", "Panas kénéh, langsung saatos di pesen"],
+        answer: 3,
+        explanation: "Salah sahiji ciri has tina tahu bulat nyaéta digoréng langsung saatos dipésén supaya tetep panas sarta garing di luar tapi empuk di jero."
     },
     {
-        question: "Naon bungbu anu ilaharna ditambahan dina adonan tahu bulat?",
-        options: ["Garam jeung lada", "Gula jeung cengkeh", "Kunyit jeung kayu manis", "Jahe jeung laos"],
-        answer: 0,
-        explanation: "Bungbu dasar anu ilaharna dipaké nyaéta uyah jeung lada pikeun nambahan rasa."
+        question: "Naon anu ngajadikeun rasa jeung tekstur tahu bulat béda jeung tahu biasa?",
+        options: ["Digoreng ku minyak samin", "Dijieun tina campuran kacang tanah", "Dihaluskeun, didiuk heula, tuluy dibulakeun", "Dimekarkeun ku bahan pengembang khusus"],
+        answer: 2,
+        explanation: "Tahu bulat dijieun tina tahu anu dihaleuskeun, didiuk heula, tuluy dibuleudkeun saacan digoréng, anu ngahasilkeun tekstur has anu béda jeung tahu biasa."
     },
     {
-        question: "Saha anu nyebarkeun tahu bulat di pinggir jalan?",
-        options: ["Abang-abang", "Kang tahu", "Mang-mang", "Bapak-bapak"],
+        question: "Tahu bulat mimiti jadi populér sabudeureun taun...",
+        options: ["2000", "2005", "2010", "2015"],
+        answer: 3,
+        explanation: "Tahu bulat mimiti populer di taun 2015 nalika lagu 'Tahu Bulat' viral di média sosial."
+    },
+    {
+        question: "Salah sahiji ciri has tina padagang tahu bulat nyaéta...",
+        options: ["Ngagunakeun obrog-obrog", "Ngagunakeun sora panggero tina speaker mobil", "Ngagorowok ti motor", "Ngajual di sisi situ"],
         answer: 1,
-        explanation: "Pangeusi anu nyebarkeun tahu bulat di pinggir jalan biasana disebut ku sebutan 'Kang Tahu'."
+        explanation: "Padagang tahu bulat kaceluk ku sora panggero anu diputér tina spéker mobil, anu mindeng ngandung promosi kreatif ngeunaan daganganna."
     },
     {
-        question: "Kumaha cara ngagoreng tahu bulat supaya teu meletus?",
-        options: ["Dikurebkeun dina minyak anu ngorondang", "Dikurebkeun dina minyak anu tiis", "Dikukus heula samenggem", "Dikocok samenggem"],
-        answer: 0,
-        explanation: "Pikeun nyegah tahu bulat meletus, kudu digoreng dina minyak anu geus panas pisan sarta cukup ngorondang."
-    },
-    {
-        question: "Naon ngaran kadaharan anu biasana dipasangkeun jeung tahu bulat?",
-        options: ["Batagor", "Cireng", "Cimol", "Comro"],
+        question: "Sora panggero padagang tahu bulat biasana eusina...",
+        options: ["Nyeritakeun sajarah tahu", "Nyaritakeun resep masakan", "Promosi harga jeung cara ngolah", "Ngajak balanja jeung ngajangjikeun diskon"],
         answer: 2,
-        explanation: "Cimol sering dipasangkeun jeung tahu bulat dina warung-warung."
+        explanation: "Sora panggero biasana ngandung promosi harga, kualitas, jeung cara ngolah tahu bulat anu dijualna."
     },
     {
-        question: "Kumaha cara ngajaga kerenyahan tahu bulat?",
-        options: ["Disimpen dina wadah kedap hawa", "Dikurebkeun deui samenggem", "Dikukus deui", "Dihakan langsung"],
-        answer: 0,
-        explanation: "Pikeun ngajaga kerenyahan, simpen dina wadah kedap hawa atawa wadah anu rapet."
-    },
-    {
-        question: "Iraha biasana tahu bulat dijual?",
-        options: ["Isuk-isuk", "Beurang", "Sore", "Peuting"],
-        answer: 3,
-        explanation: "Tahu bulat biasana dijual peuting nepi ka isuk-isuk di warung-warung pinggir jalan."
-    },
-    {
-        question: "Naon bahan anu bisa ditambahan dina adonan tahu bulat pikeun nambahan rasa?",
-        options: ["Bawang beureum", "Daun bawang", "Wortel", "Kabéh jawaban bener"],
-        answer: 3,
-        explanation: "Bahan-bahan kasebut tiasa ditambahan pikeun nambahan rasa sarta variasi dina adonan tahu bulat."
-    },
-    {
-        question: "Kumaha cara ngadon tahu bulat supaya hasilna alus?",
-        options: ["Didamel kalayan ati-ati", "Dikocok kenceng-kenceng", "Dikukus heula", "Dikocok samenggem"],
-        answer: 0,
-        explanation: "Pikeun hasil anu alus, adonan kudu didamel kalayan ati-ati sarta teu kacida kenceng ngadonna."
-    },
-    {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu diiris sarta diisian?",
-        options: ["Tahu bulat isi", "Tahu bulat krispi", "Tahu bulat goreng", "Tahu bulat krispi"],
-        answer: 0,
-        explanation: "Tahu bulat anu diiris sarta diisian biasana disebut ku ngaran tahu bulat isi."
-    },
-    {
-        question: "Kumaha cara ngadon tahu bulat supaya hasilna lembut?",
-        options: ["Ditambahan santan", "Ditambahan tepung kanji", "Ditambahan susu bubuk", "Kabéh jawaban bener"],
-        answer: 3,
-        explanation: "Sadayana bahan éta tiasa nambahan kalembutan dina adonan tahu bulat."
-    },
-    {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu dipotong dadu?",
-        options: ["Tahu bulat goreng", "Tahu krispi", "Tahu bulat krispi", "Tahu bulat goreng"],
+        question: "Dina kaulinan mobile 'Tahu Bulat', nu jadi tujuan utama pamaén téh...",
+        options: ["Miceun tahu nu rusak", "Ngalatih koki jeung juru goreng", "Ngumpulkeun duit tina jualan tahu bulat", "Nyieun tahu rasa keju"],
         answer: 2,
-        explanation: "Tahu bulat anu dipotong dadu sateuacan digoreng biasana disebut ku ngaran tahu bulat krispi."
+        explanation: "Kaulinan 'Tahu Bulat' ngeunaan cara ngumpulkeun duit tina hasil jualan tahu bulat anu digoréng ku pamaén."
     },
     {
-        question: "Kumaha cara ngajaga kerenyahan tahu bulat anu geus digoreng?",
-        options: ["Disimpen dina toples kedap udara", "Dikurebkeun deui samenggem", "Dikukus deui", "Dihakan langsung"],
-        answer: 0,
-        explanation: "Pikeun ngajaga kerenyahan, simpen dina toples kedap udara atanapi wadah anu rapet."
+        question: "Naha disebutna 'tahu bulat'?",
+        options: ["Sabab warnana buleud", "Sabab digoreng buleud-buleud", "Sabab dijieun di wewengkon Bulat", "Sabab ku rasa anu bulat (sempurna)"],
+        answer: 1,
+        explanation: "Ngaran 'tahu bulat' dicokot tina bentukna anu buleud-buleud nalika digoréng, anu mangrupa ciri has tina kadaharan ieu."
     },
     {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu diiris tipis?",
-        options: ["Keripik tahu bulat", "Tahu bulat krispi", "Tahu bulat goreng", "Kerupuk tahu"],
-        answer: 0,
-        explanation: "Tahu bulat anu diiris tipis sateuacan digoreng biasana disebut ku ngaran keripik tahu bulat."
+        question: "Salah sahiji alesan kunaon tahu bulat loba nu resep nyaéta...",
+        options: ["Mahal jeung eksklusif", "Gampang kapanggih jeung murah hargana", "Leuwih kuat tina tahu biasa", "Dijieun tina daging soy"],
+        answer: 1,
+        explanation: "Tahu bulat populer sabab gampang kapanggih di pinggir jalan sarta hargana anu tepat pikeun sagala kalangan."
     },
     {
-        question: "Kumaha cara ngadon tahu bulat supaya hasilna garing?",
-        options: ["Ditambahan tepung beras", "Ditambahan tepung tapioka", "Ditambahan tepung kanji", "Kabéh jawaban bener"],
-        answer: 3,
-        explanation: "Sadayana bahan éta tiasa nambahan kekerisan dina adonan tahu bulat."
-    },
-    {
-        question: "Iraha biasana aya kang tahu bulat di jalan?",
-        options: ["Isuk-isuk", "Beurang", "Sore", "Peuting"],
-        answer: 3,
-        explanation: "Kang tahu bulat biasana aya peuting nepi ka isuk-isuk di sisi jalan."
-    },
-    {
-        question: "Naon bungbu anu bisa nambahan rasa gurih dina tahu bulat?",
-        options: ["Royco", "Masako", "Vetsin", "Kabéh jawaban bener"],
-        answer: 3,
-        explanation: "Sadayana bungbu éta tiasa nambahan rasa gurih dina adonan tahu bulat."
-    },
-    {
-        question: "Kumaha cara ngadon tahu bulat supaya teu gampang pegat?",
-        options: ["Ditambahan endog", "Ditambahan tepung tapioka", "Ditambahan cau uli", "Kabéh jawaban bener"],
-        answer: 3,
-        explanation: "Sadayana bahan éta tiasa ngaronjatkeun kalis adonan supados teu gampang pegat."
-    },
-    {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu dibelah sarta diisis sambel?",
-        options: ["Tahu bulat pedas", "Tahu jeletot", "Tahu bulat krispi", "Tahu bulat isi sambel"],
-        answer: 3,
-        explanation: "Tahu bulat anu dibelah sarta diisis sambel biasana disebut ku ngaran tahu bulat isi sambel."
-    },
-    {
-        question: "Kumaha cara ngajaga kaséhatan nalika ngadahar tahu bulat?",
-        options: ["Ulah kebleng", "Dahar kalayan sayuran", "Ngurangkeun konsumsi gorengan", "Kabéh jawaban bénér"],
-        answer: 3,
-        explanation: "Pikeun ngajaga kaséhatan, kudu ngadahar kalayan saimbang sarta ulah kaleuleuwihi."
-    },
-    {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu dibelah sarta diisis oncom?",
-        options: ["Tahu bulat isi oncom", "Tahu bulat krispi", "Tahu jeletot", "Tahu bulat pedas"],
-        answer: 0,
-        explanation: "Tahu bulat anu dibelah sarta diisis oncom biasana disebut ku ngaran tahu bulat isi oncom."
-    },
-    {
-        question: "Kumaha cara ngadon tahu bulat supaya hasilna garing tapi teu atos?",
-        options: ["Ditambahan tepung beras", "Ditambahan tepung tapioka", "Ditambahan endog", "Kabéh jawaban bénér"],
-        answer: 3,
-        explanation: "Sadayana bahan éta tiasa ngaronjatkeun kualitas adonan supados garing tapi teu atos."
-    },
-    {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu dibelah sarta diisis sambel kacang?",
-        options: ["Tahu bulat sambel kacang", "Tahu bulat krispi", "Tahu jeletot", "Tahu bulat pedas"],
-        answer: 0,
-        explanation: "Tahu bulat anu dibelah sarta diisis sambel kacang biasana disebut ku ngaran tahu bulat sambel kacang."
-    },
-    {
-        question: "Kumaha cara ngadon tahu bulat supaya hasilna garing tapi teu atos?",
-        options: ["Ditambahan tepung beras", "Ditambahan tepung tapioka", "Ditambahan endog", "Kabéh jawaban bénér"],
-        answer: 3,
-        explanation: "Sadayana bahan éta tiasa ngaronjatkeun kualitas adonan supados garing tapi teu atos."
-    },
-    {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu dibelah sarta diisis sambel matah?",
-        options: ["Tahu bulat sambel matah", "Tahu bulat krispi", "Tahu jeletot", "Tahu bulat pedas"],
-        answer: 0,
-        explanation: "Tahu bulat anu dibelah sarta diisis sambel matah biasana disebut ku ngaran tahu bulat sambel matah."
-    },
-    {
-        question: "Kumaha cara ngadon tahu bulat supaya hasilna garing tapi teu atos?",
-        options: ["Ditambahan tepung beras", "Ditambahan tepung tapioka", "Ditambahan endog", "Kabéh jawaban bénér"],
-        answer: 3,
-        explanation: "Sadayana bahan éta tiasa ngaronjatkeun kualitas adonan supados garing tapi teu atos."
-    },
-    {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu dibelah sarta diisis sambel ijo?",
-        options: ["Tahu bulat sambel ijo", "Tahu bulat krispi", "Tahu jeletot", "Tahu bulat pedas"],
-        answer: 0,
-        explanation: "Tahu bulat anu dibelah sarta diisis sambel ijo biasana disebut ku ngaran tahu bulat sambel ijo."
-    },
-    {
-        question: "Kumaha cara ngadon tahu bulat supaya hasilna garing tapi teu atos?",
-        options: ["Ditambahan tepung beras", "Ditambahan tepung tapioka", "Ditambahan endog", "Kabéh jawaban bénér"],
-        answer: 3,
-        explanation: "Sadayana bahan éta tiasa ngaronjatkeun kualitas adonan supados garing tapi teu atos."
-    },
-    {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu dibelah sarta diisis sambel terasi?",
-        options: ["Tahu bulat sambel terasi", "Tahu bulat krispi", "Tahu jeletot", "Tahu bulat pedas"],
-        answer: 0,
-        explanation: "Tahu bulat anu dibelah sarta diisis sambel terasi biasana disebut ku ngaran tahu bulat sambel terasi."
-    },
-    {
-        question: "Kumaha cara ngadon tahu bulat supaya hasilna garing tapi teu atos?",
-        options: ["Ditambahan tepung beras", "Ditambahan tepung tapioka", "Ditambahan endog", "Kabéh jawaban bénér"],
-        answer: 3,
-        explanation: "Sadayana bahan éta tiasa ngaronjatkeun kualitas adonan supados garing tapi teu atos."
-    },
-    {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu dibelah sarta diisis sambel kecap?",
-        options: ["Tahu bulat sambel kecap", "Tahu bulat krispi", "Tahu jeletot", "Tahu bulat pedas"],
-        answer: 0,
-        explanation: "Tahu bulat anu dibelah sarta diisis sambel kecap biasana disebut ku ngaran tahu bulat sambel kecap."
-    },
-    {
-        question: "Kumaha cara ngadon tahu bulat supaya hasilna garing tapi teu atos?",
-        options: ["Ditambahan tepung beras", "Ditambahan tepung tapioka", "Ditambahan endog", "Kabéh jawaban bénér"],
-        answer: 3,
-        explanation: "Sadayana bahan éta tiasa ngaronjatkeun kualitas adonan supados garing tapi teu atos."
-    },
-    {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu dibelah sarta diisis sambel rujak?",
-        options: ["Tahu bulat sambel rujak", "Tahu bulat krispi", "Tahu jeletot", "Tahu bulat pedas"],
-        answer: 0,
-        explanation: "Tahu bulat anu dibelah sarta diisis sambel rujak biasana disebut ku ngaran tahu bulat sambel rujak."
-    },
-    {
-        question: "Kumaha cara ngadon tahu bulat supaya hasilna garing tapi teu atos?",
-        options: ["Ditambahan tepung beras", "Ditambahan tepung tapioka", "Ditambahan endog", "Kabéh jawaban bénér"],
-        answer: 3,
-        explanation: "Sadayana bahan éta tiasa ngaronjatkeun kualitas adonan supados garing tapi teu atos."
-    },
-    {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu dibelah sarta diisis sambel bajak?",
-        options: ["Tahu bulat sambel bajak", "Tahu bulat krispi", "Tahu jeletot", "Tahu bulat pedas"],
-        answer: 0,
-        explanation: "Tahu bulat anu dibelah sarta diisis sambel bajak biasana disebut ku ngaran tahu bulat sambel bajak."
-    },
-    {
-        question: "Kumaha cara ngadon tahu bulat supaya hasilna garing tapi teu atos?",
-        options: ["Ditambahan tepung beras", "Ditambahan tepung tapioka", "Ditambahan endog", "Kabéh jawaban bénér"],
-        answer: 3,
-        explanation: "Sadayana bahan éta tiasa ngaronjatkeun kualitas adonan supados garing tapi teu atos."
-    },
-    {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu dibelah sarta diisis sambel mangga?",
-        options: ["Tahu bulat sambel mangga", "Tahu bulat krispi", "Tahu jeletot", "Tahu bulat pedas"],
-        answer: 0,
-        explanation: "Tahu bulat anu dibelah sarta diisis sambel mangga biasana disebut ku ngaran tahu bulat sambel mangga."
-    },
-    {
-        question: "Kumaha cara ngadon tahu bulat supaya hasilna garing tapi teu atos?",
-        options: ["Ditambahan tepung beras", "Ditambahan tepung tapioka", "Ditambahan endog", "Kabéh jawaban bénér"],
-        answer: 3,
-        explanation: "Sadayana bahan éta tiasa ngaronjatkeun kualitas adonan supados garing tapi teu atos."
-    },
-    {
-        question: "Naon ngaran kadaharan anu dijieun tina tahu bulat anu dibelah sarta diisis sambel dabu-dabu?",
-        options: ["Tahu bulat sambel dabu-dabu", "Tahu bulat krispi", "Tahu jeletot", "Tahu bulat pedas"],
-        answer: 0,
-        explanation: "Tahu bulat anu dibelah sarta diisis sambel dabu-dabu biasana disebut ku ngaran tahu bulat sambel dabu-dabu."
+        question: "Tahu bulat ogé bisa disebut bagian tina inovasi kuliner Sunda sabab...",
+        options: ["Ngagunakeun bahan impor", "Digoreng tanpa minyak", "Ngahasilkeun bentuk anyar tina olahan tahu", "Dijual ngan di toko élit"],
+        answer: 2,
+        explanation: "Tahu bulat mangrupa inovasi tina olahan tahu tradisional anu ngahasilkeun produk anyar kalayan cita rasa jeung tekstur anu unik."
     }
 
 ];
