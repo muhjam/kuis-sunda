@@ -3,76 +3,75 @@ const questions = [
     {
         question: "Tina mana asal usul tahu bulat?",
         options: ["Jawa Barat", "Jawa Tengah", "Jawa Timur", "Sumatera Barat"],
-        answer: 0,
+        answer: "Jawa Barat",
         explanation: "Tahu bulat asalna ti Jawa Barat sarta jadi jajanan khas Sunda anu populer."
     },
     {
         question: "Naon bahan dasar pembuatan tahu bulat?",
         options: ["Tahu putih", "Tahu sumedang", "Tahu pong", "Tahu kuning"],
-        answer: 2,
+        answer: "Tahu pong",
         explanation: "Tahu bulat biasana dijieun tina tahu pong anu geus dihaleuskeun sarta diaduk nepi ka kalis."
     },
     {
         question: "Kumaha cara nyieun tahu bulat anu bener?",
-        options: ["Digoreng langsung", "Dikukus heula", "Dibakar heula", "Dihaluskeun heula sarta dibuleudkeun"],
-        answer: 3,
+        options: ["Digoreng langsung", "Direbus heula sateuacan digoreng", "Dikukus heula", "Dihaluskeun heula sarta dibuleudkeun"],
+        answer: "Dihaluskeun heula sarta dibuleudkeun",
         explanation: "Tahu bulat dijieun ku cara dihaleuskeun heula, dibuleudkeun, tuluy digoreng nepi ka garing."
     },
     {
         question: "Saha nu ngawanohkeun tahu bulat munggaran?",
         options: ["Asep", "Dani Firmansyah", "Kang Asep", "Ente Sutisna"],
-        answer: 1,
+        answer: "Dani Firmansyah",
         explanation: "Dani Firmansyah mangrupikeun tokoh anu ngawanohkeun tahu bulat ka masarakat luas ngaliwatan lagu viralna."
     },
     {
         question: "Naon ngaran lagu anu ngajadikeun tahu bulat jadi populer?",
         options: ["Tahu Bulat", "Juragan Tahu", "Tahu Bulatku", "Tahu Bulat Viral"],
-        answer: 0,
+        answer: "Tahu Bulat",
         explanation: "Lagu 'Tahu Bulat' anu dinyanyikeun ku Dani Firmansyah ngajadikeun tahu bulat jadi populer di masarakat."
     },
     {
         question: "Kumaha ciri has sora panggero padagang tahu bulat?",
         options: ["Nyaring", "Lembut", "Khas ngagorowok", "Nyanyi-nyanyi"],
-        answer: 2,
+        answer: "Khas ngagorowok",
         explanation: "Padagang tahu bulat kaceluk ku sora panggerona anu khas ngagorowok ngagambarkeun daganganna."
     },
     {
         question: "Dina taun sabaraha lagu Tahu Bulat viral?",
         options: ["2013", "2014", "2015", "2016"],
-        answer: 2,
+        answer: "2015",
         explanation: "Lagu Tahu Bulat viral dina taun 2015 sarta ngajadikeun jajanan ieu langkung populer deui."
     },
     {
         question: "Naon ngaran kaulinan mobile anu ngangkat tema tahu bulat?",
         options: ["Tahu Bulat Mania", "Tahu Bulatku", "Tahu Bulat Viral", "Tahu Bulat: The Game"],
-        answer: 0,
+        answer: "Tahu Bulat Mania",
         explanation: "Kaulinan mobile 'Tahu Bulat Mania' mangrupikeun kaulinan anu ngangkat tema jualan tahu bulat."
     },
     {
         question: "Sabaraha harga standar tahu bulat per bijina?",
         options: ["Rp 500", "Rp 1.000", "Rp 2.000", "Rp 5.000"],
-        answer: 0,
+        answer: "Rp 500",
         explanation: "Harga standar tahu bulat biasana dijual dina harga Rp 500 per biji, tapi bisa béda-béda gumantung kana lokasi."
     },
     {
         question: "Kumaha cara ngajaga kerenyahan tahu bulat?",
         options: ["Disimpen dina wadah kedap udara", "Dikukus deui", "Digoreng deui", "Dilempeukkeun"],
-        answer: 2,
+        answer: "Digoreng deui",
         explanation: "Pikeun ngajaga kerenyahan, tahu bulat bisa digoreng deui sakedap sateuacan didahar."
     },
     {
         question: "Salah sahiji alesan kunaon tahu bulat loba nu resep nyaéta...",
         options: ["Mahal jeung eksklusif", "Gampang kapanggih jeung murah hargana", "Leuwih kuat tina tahu biasa", "Dijieun tina daging soy"],
-        answer: 1,
+        answer: "Gampang kapanggih jeung murah hargana",
         explanation: "Tahu bulat populer sabab gampang kapanggih di pinggir jalan sarta hargana anu tepat pikeun sagala kalangan."
     },
     {
         question: "Tahu bulat ogé bisa disebut bagian tina inovasi kuliner Sunda sabab...",
         options: ["Ngagunakeun bahan impor", "Digoreng tanpa minyak", "Ngahasilkeun bentuk anyar tina olahan tahu", "Dijual ngan di toko élit"],
-        answer: 2,
+        answer: "Ngahasilkeun bentuk anyar tina olahan tahu",
         explanation: "Tahu bulat mangrupa inovasi tina olahan tahu tradisional anu ngahasilkeun produk anyar kalayan cita rasa jeung tekstur anu unik."
     }
-
 ];
 
 // Shuffle array function
@@ -85,29 +84,14 @@ function shuffleArray(array) {
 }
 
 // DOM Elements
-const startScreen = document.getElementById('start-screen');
 const quizScreen = document.getElementById('quiz-screen');
 const resultScreen = document.getElementById('result-screen');
 const questionElement = document.getElementById('question');
 const optionsElement = document.getElementById('options');
 const finalScoreElement = document.getElementById('final-score');
 const resultMessage = document.getElementById('result-message');
-const progressBar = document.querySelector('.progress-bar');
-const questionCount = document.getElementById('question-count');
 
-// Update score display with tahu icons
-function updateScore() {
-    const tahuIcons = document.querySelectorAll('.tahu-icon');
-    const scoreCount = Math.floor(score / 10); // Convert to 1-3 scale
-    
-    tahuIcons.forEach((icon, index) => {
-        if (index < scoreCount) {
-            icon.classList.add('earned');
-        } else {
-            icon.classList.remove('earned');
-        }
-    });
-}
+
 
 // Audio elements
 const correctSound = document.getElementById('correct-sound');
@@ -115,10 +99,11 @@ const wrongSound = document.getElementById('wrong-sound');
 const bgMusic = document.getElementById('background-music');
 
 // Game variables
-let currentQuestionIndex = 0;
+let currentQuestion = null;
 let score = 0;
-let shuffledQuestions = [];
-let selectedQuestions = [];
+let askedQuestions = []; // Untuk melacak pertanyaan yang sudah ditanyakan
+let selectedOption = null;
+let correctAnswer = null;
 
 // Start background music as soon as possible
 function startBackgroundMusic() {
@@ -128,153 +113,226 @@ function startBackgroundMusic() {
     if (playPromise !== undefined) {
         playPromise.catch(error => {
             console.log('Autoplay prevented, will try again after user interaction');
-            // Wait for user interaction to try again
+            // Try to play music on user interaction
             const playOnInteraction = () => {
-                bgMusic.play().catch(e => console.log('Still cannot play:', e));
+                bgMusic.play().catch(e => console.log('Autoplay prevented:', e));
                 document.removeEventListener('click', playOnInteraction);
                 document.removeEventListener('keydown', playOnInteraction);
             };
             
-            document.addEventListener('click', playOnInteraction);
-            document.addEventListener('keydown', playOnInteraction);
+            // Try to play immediately
+            bgMusic.play().catch(e => {
+                console.log('Autoplay prevented, waiting for interaction');
+                // If autoplay is prevented, wait for user interaction
+                document.addEventListener('click', playOnInteraction);
+                document.addEventListener('keydown', playOnInteraction);
+            });
         });
     }
 }
 
-// Start the music when the page loads
-window.addEventListener('DOMContentLoaded', startBackgroundMusic);
-
-// Start Quiz
-function startQuiz() {
-    startScreen.classList.add('hidden');
-    quizScreen.classList.remove('hidden');
-    
-    // Shuffle and select 3 random questions
-    shuffledQuestions = shuffleArray([...questions]);
-    selectedQuestions = shuffledQuestions.slice(0, 3);
-    
-    // Ensure music is playing when quiz startds
+// Start the quiz immediately when the page loads
+window.addEventListener('DOMContentLoaded', () => {
     startBackgroundMusic();
-    showQuestion();
-}
+    showRandomQuestion();
+});
 
 // Show current question
-function showQuestion() {
-    if (currentQuestionIndex >= selectedQuestions.length) {
-        showResult();
+function showRandomQuestion() {
+    // Reset state
+    optionsElement.innerHTML = '';
+    
+    // Re-enable pointer events on options container
+    optionsElement.style.pointerEvents = 'auto';
+    
+    // Get a random question that hasn't been asked yet
+    const availableQuestions = questions.filter(q => !askedQuestions.includes(q.question));
+    
+    // If all questions have been asked, reset the asked questions
+    if (availableQuestions.length === 0) {
+        askedQuestions = [];
+        showRandomQuestion();
         return;
     }
     
-    const question = selectedQuestions[currentQuestionIndex];
-    questionElement.textContent = question.question;
+    // Get a random question
+    const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[randomIndex];
     
-    // Clear previous options
-    optionsElement.innerHTML = '';
+    // Mark this question as asked
+    if (currentQuestion.question) {
+        askedQuestions.push(currentQuestion.question);
+    }
     
-    // Add new options
-    question.options.forEach((option, index) => {
+    // Display the question
+    questionElement.textContent = currentQuestion.question || '';
+    
+    // Set the correct answer
+    correctAnswer = currentQuestion.answer;
+    
+    // Shuffle the options
+    const shuffledOptions = [...(currentQuestion.options || [])].sort(() => Math.random() - 0.5);
+    
+    // Display the options
+    shuffledOptions.forEach(option => {
+        if (!option) return;
         const optionElement = document.createElement('div');
         optionElement.className = 'option';
-        optionElement.innerHTML = `
-            <span class="option-prefix">${String.fromCharCode(65 + index)}</span>
-            <span>${option}</span>
-        `;
-        
-        optionElement.addEventListener('click', () => selectAnswer(index));
+        optionElement.textContent = option;
+        optionElement.addEventListener('click', selectAnswer);
         optionsElement.appendChild(optionElement);
     });
-    
-    // Update progress
-    updateProgress();
 }
 
 // Select answer
-function selectAnswer(selectedIndex) {
-    const question = selectedQuestions[currentQuestionIndex];
-    const optionElements = document.querySelectorAll('.option');
+function selectAnswer(e) {
+    const selectedAnswer = e.target.textContent;
+    const isCorrect = selectedAnswer === correctAnswer;
     
-    // Disable all options
-    optionElements.forEach(option => {
-        option.style.pointerEvents = 'none';
+    // Disable all options to prevent multiple selections
+    const optionButtons = document.querySelectorAll('.option');
+    optionButtons.forEach(button => {
+        button.style.pointerEvents = 'none';
     });
     
     // Check answer
-    if (selectedIndex === question.answer) {
-        optionElements[selectedIndex].classList.add('correct');
-        score += 10;
-        updateScore(); // Update tahu icons
-        correctSound.play();
-        optionElements[selectedIndex].classList.add('pulse');
-    } else {
-        optionElements[selectedIndex].classList.add('wrong');
-        optionElements[question.answer].classList.add('correct');
-        wrongSound.play();
-        optionElements[selectedIndex].classList.add('shake');
-    }
-    
-    // Show next button after delay
-    setTimeout(() => {
-        currentQuestionIndex++;
-        if (currentQuestionIndex < selectedQuestions.length) {
-            showQuestion();
-        } else {
+    if (isCorrect) {
+        // Play correct sound
+        correctSound.currentTime = 0;
+        correctSound.play().catch(e => console.log('Audio play failed:', e));
+        
+        // Show visual feedback
+        e.target.classList.add('correct');
+        
+        // Show result after delay
+        setTimeout(() => {
+            // Play lunas sound when showing result at maximum volume
+            const lunasSound = document.getElementById('lunas-sound');
+            lunasSound.volume = 1.0; // Set to maximum volume (1.0 is 100%)
+            lunasSound.currentTime = 0; // Rewind to start
+            lunasSound.play().catch(e => console.log('Auto-play prevented:', e));
+            
+            // Clear the quiz screen
+            quizScreen.classList.add('hidden');
+            
+            // Show the result screen
             showResult();
-        }
-    }, 1500);
+        }, 1000);
+    } else {
+        // Play wrong sound
+        wrongSound.currentTime = 0;
+        wrongSound.play().catch(e => console.log('Audio play failed:', e));
+        
+        // Show correct answer
+        const options = document.querySelectorAll('.option');
+        options.forEach(option => {
+            if (option.textContent === correctAnswer) {
+                option.classList.add('correct');
+            }
+        });
+        e.target.classList.add('wrong');
+        
+        // Show new question after delay
+        setTimeout(() => {
+            // Clear the current question and options
+            questionElement.textContent = '';
+            optionsElement.innerHTML = '';
+            
+            // Show new random question
+            showRandomQuestion();
+        }, 2000);
+    }
 }
 
-// Update progress bar
-function updateProgress() {
-    const progress = ((currentQuestionIndex) / selectedQuestions.length) * 100;
-    progressBar.style.width = `${progress}%`;
-    questionCount.textContent = `Pertanyaan ${currentQuestionIndex + 1}/${selectedQuestions.length}`;
+// Reset state
+function resetState() {
+    score = 0;
+    askedQuestions = [];
+    selectedOption = null;
+    correctAnswer = null;
+    
+    // Clear the options container
+    while (optionsElement.firstChild) {
+        optionsElement.removeChild(optionsElement.firstChild);
+    }
 }
+
+
 
 // Show result
 function showResult() {
+    // Hide quiz screen
     quizScreen.classList.add('hidden');
+    
+    // Show result screen
     resultScreen.classList.remove('hidden');
     
-    const tahuCount = Math.floor(score / 10);
+    // Reset for next game
+    score = 0;
+    askedQuestions = [];
     
-    // Set result message based on number of tahu earned
-    let message = '';
-    let subMessage = '';
+    // Since we only show result on win, we can assume allCorrect is true
+    const allCorrect = true;
     
-    if (tahuCount === 0) {
-        message = 'Hampura, anjeun tacan meunang tahu bulat!';
-        subMessage = 'Hayu cobian deui, bisa wae meunangkeun tahu bulat leuwih loba!';
-    } else if (tahuCount === 1) {
-        message = 'Alus! Anjeun meunangkeun 1 tahu bulat!';
-        subMessage = 'Coba deui, bisa wae meunangkeun leuwih loba tahu bulat!';
-    } else if (tahuCount === 2) {
-        message = 'Hébat! Anjeun meunangkeun 2 tahu bulat!';
-        subMessage = 'Sakali deui, bisa wae meunangkeun 3 tahu bulat!';
+    // Generate dynamic data
+    const now = new Date();
+    const pad = n => n.toString().padStart(2, '0');
+    const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+    
+    const dayName = days[now.getDay()];
+    const dateStr = `${dayName}, ${pad(now.getDate())} ${months[now.getMonth()]} ${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+    
+    const amount = 'Rp Gratis';
+    const userName = 'Tahu Bulat Lovers';
+    const txnNo = `TXN${Math.floor(10000000 + Math.random()*90000000)}`;
+    const rrnNo = `RRN${Math.floor(10000000 + Math.random()*90000000)}`;
+
+    // Set receipt fields
+    document.getElementById('receipt-date').textContent = dateStr;
+    document.getElementById('receipt-amount').textContent = amount;
+    document.getElementById('receipt-user').innerHTML = 'Dari <span class="receipt-user-name">' + userName + '</span>';
+    document.getElementById('receipt-txn').innerHTML = 'No.Transaksi <span class="receipt-txn-no">' + txnNo + '</span>';
+    document.getElementById('receipt-rrn').innerHTML = 'RRN <span class="receipt-rrn-no">' + rrnNo + '</span>';
+
+    // Status and icon
+    const statusElem = document.getElementById('receipt-status');
+    const checkCircle = document.querySelector('.checkmark-circle');
+    const checkmark = document.getElementById('checkmark-img');
+    const footer = document.getElementById('receipt-footer');
+    
+    if (allCorrect) {
+        statusElem.textContent = 'Berhasil';
+        checkCircle.style.background = '#4CAF50'; // Green for success
+        checkmark.src = 'src/checked.png';
+        checkmark.style.display = 'block';
+        checkmark.style.animation = 'checkmark-animation 0.6s ease-in-out';
+        footer.innerHTML = '<span style="color:#4CAF50;font-weight:600;font-size:1.2em">LUNAS</span><br><span style="font-size:0.96em">Poto keun layarna, teras berekeun ka akang teteh kasep garelis anu boga tenan.</span>';
     } else {
-        message = 'Luar biasa! Anjeun meunangkeun 3 tahu bulat!';
-        subMessage = 'Pangaweruh anjeun ngeunaan tahu bulat kacida alusna!';
+        statusElem.textContent = 'Belum Lunas';
+        checkCircle.style.background = '#e74c3c';
+        checkmark.src = 'src/wrong.png'; // Make sure you have a wrong.png in src/
+        checkmark.style.display = 'block';
+        checkmark.style.animation = 'checkmark-animation 0.6s ease-in-out';
+        const motivasi = [
+            'Tingkatkeun deui pangaweruh anjeun ngeunaan tahu bulat!',
+            'Cobian deui, jawab sakabéh patarosan kalayan leres!',
+            'Sakali deui, pasti bisa meunangkeun tahu bulat gratis!',
+            'Ulah putus asa, cobian deui pikeun ngahontal 1 porsi tahu bulat!',
+            'Pangaweruh anjeun ngeunaan tahu bulat kedah ditingkatkeun deui!',
+            'Jawab sakabéh patarosan kalayan leres pikeun meunangkeun tahu bulat gratis!'
+        ];
+        footer.innerHTML = '<span style="color:#e74c3c;font-weight:600">Belum Lunas</span><br><span style="font-size:0.96em">'+motivasi[Math.floor(Math.random()*motivasi.length)]+'</span>';
     }
-    
-    // Update the result message with HTML for better formatting
-    const shareText = tahuCount > 0 ? 
-        '<p class="share-text">Poto keun layarna, teras berekeun ka akang teteh kasep garelis anu boga tenan</p>' : 
-        '';
-        
-    resultMessage.innerHTML = `
-        <h3>${message}</h3>
-        <p>${subMessage}</p>
-        <div class="tahu-result">
-            ${Array(tahuCount).fill().map(() => `<img src="src/tahu.png" alt="Tahu Bulat" class="tahu-earned">`).join('')}
-        </div>
-        ${shareText}
-    `;
+    // Hide old result message if present
+    if (typeof resultMessage !== 'undefined') resultMessage.innerHTML = '';
+
 }
 
 // Restart quiz
 function restartQuiz() {
     currentQuestionIndex = 0;
     score = 0;
-    updateScore(); // Reset tahu icons
     resultScreen.classList.add('hidden');
     startQuiz();
 }
@@ -283,15 +341,16 @@ function restartQuiz() {
 function backToMenu() {
     currentQuestionIndex = 0;
     score = 0;
-    updateScore(); // Reset tahu icons
     resultScreen.classList.add('hidden');
     startScreen.classList.remove('hidden');
 }
 
 // Event Listeners
-document.getElementById('start-btn').addEventListener('click', startQuiz);
 document.getElementById('restart-btn').addEventListener('click', restartQuiz);
 document.getElementById('back-to-menu-btn').addEventListener('click', backToMenu);
+
+// Start the quiz immediately
+showRandomQuestion();
 
 // Add hover effect for options
 optionsElement.addEventListener('mouseover', (e) => {

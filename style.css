@@ -424,6 +424,136 @@ body::before {
 }
 
 /* Result Screen */
+#result-message {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Receipt Card Styles */
+.receipt-card {
+    max-width: 320px;
+    margin: 16px auto 16px auto;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.04);
+    padding: 0 0 16px 0;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.receipt-header {
+    background: #f6f7f9;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 12px 0 6px 0;
+    text-align: center;
+}
+.receipt-title {
+    color: #1976d2;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.receipt-body {
+    padding: 12px 16px 0 16px;
+    text-align: center;
+}
+.receipt-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.98rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+.receipt-label {
+    font-weight: 500;
+}
+.receipt-date {
+    color: #888;
+    font-size: 0.93rem;
+}
+.receipt-amount {
+    color: #1976d2;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+.receipt-status {
+    color: #222;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 7px 0 12px 0;
+}
+.receipt-check {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes checkmark-animation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.checkmark-circle {
+    width: 60px;
+    height: 60px;
+    background: #1976d2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(25,118,210,0.10);
+}
+.checkmark {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+.receipt-user, .receipt-txn, .receipt-rrn {
+    color: #666; /* Slightly lighter color */
+    font-size: 0.85rem; /* Reduced from 0.98rem */
+    margin: 2px 0;
+    text-align: center;
+    line-height: 1.4; /* Slightly increased line height */
+}
+.receipt-user span, .receipt-txn span, .receipt-rrn span {
+    color: #111;
+    font-weight: 500;
+}
+.receipt-footer {
+    text-align: center;
+    color: #888;
+    font-size: 0.93rem;
+    margin-top: 12px;
+}
+
+@media (max-width: 500px) {
+    .receipt-card {
+        max-width: 92vw;
+        margin: 12px auto;
+        border-radius: 5px;
+        padding: 0 0 12px 0;
+    }
+    .receipt-body {
+        padding: 10px 12px 0 12px;
+    }
+}
 #result-screen {
     max-width: 100%;
     padding: 30px 20px;
