@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="su">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Tahu Bulat - Budaya Sunda</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Hiasan Kujang -->
+        <div class="kujang-decoration">
+            <svg viewBox="0 0 100 100" class="kujang">
+                <path d="M50,10 L60,30 L80,35 L65,50 L70,70 L50,60 L30,70 L35,50 L20,35 L40,30 Z" fill="var(--primary)" opacity="0.2"/>
+            </svg>
+        </div>
+        
+        <div class="header">
+            <div class="sundanese-pattern"></div>
+            <h1>Kuis Tahu Bulat</h1>
+            <p class="subtitle">Ngawasah Élmu Ngeunaan Tahu Bulat</p>
+            <div class="score-container">
+                <span>Skor: </span>
+                <span id="score">0</span>
+            </div>
+        </div>
+
+        <div id="start-screen" class="screen">
+            <div class="start-content">
+                <img src="src/tahu-bulat.jpeg" alt="Tahu Bulat" class="logo">
+                <h2>Wilujeng Sumping di Kuis Tahu Bulat</h2>
+                <p>Uji pangaweruh anjeun ngeunaan sajarah jeung asal-usul tahu bulat!</p>
+                <button id="start-btn" class="btn">Mimitian Kuis</button>
+            </div>
+        </div>
+
+        <div id="quiz-screen" class="screen hidden">
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+                <div id="question-count">Pertanyaan 1/3</div>
+            </div>
+            
+            <div id="question-container">
+                <h2 id="question">Pertanyaan bakal muncul di dieu</h2>
+                <div id="options" class="options">
+                    <!-- Opsi bakal ditambahkeun ku JavaScript -->
+                </div>
+            </div>
+            
+            <div id="feedback" class="feedback hidden">
+                <p id="feedback-text"></p>
+                <button id="next-btn" class="btn">Pertanyaan Salajengna</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <div class="result-content">
+                <div class="sundanese-ornament top">
+                    <svg viewBox="0 0 200 20" class="ornament">
+                        <path d="M0,10 Q50,0 100,10 T200,10" stroke="var(--primary)" fill="none" stroke-width="2" opacity="0.3"/>
+                    </svg>
+                </div>
+                
+                <h2>HASIL KUIS</h2>
+                <div class="score-display">
+                    <p>Punten, skor anjeun:</p>
+                    <div id="final-score" class="final-score">0</div>
+                    <p id="result-message"></p>
+                </div>
+                
+                <div class="sundanese-ornament bottom">
+                    <svg viewBox="0 0 200 20" class="ornament">
+                        <path d="M0,10 Q50,20 100,10 T200,10" stroke="var(--primary)" fill="none" stroke-width="2" opacity="0.3"/>
+                    </svg>
+                </div>
+                
+                <div class="result-buttons">
+                    <button id="restart-btn" class="btn">
+                        <span class="btn-text">Ulangi Kuis</span>
+                    </button>
+                    <button id="back-to-menu-btn" class="btn icon-btn" title="Kembali ke Menu Utama">
+                        <span class="btn-icon">🏠</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="correct-sound" preload="auto">
+        <source src="src/correct.mp3" type="audio/mpeg">
+        Hapunten, browser anjeun teu ngadukung elemen audio.
+    </audio>
+    <audio id="wrong-sound" preload="auto">
+        <source src="src/wrong.mp3" type="audio/mpeg">
+        Hapunten, browser anjeun teu ngadukung elemen audio.
+    </audio>
+    <audio id="bg-music" loop autoplay>
+        <source src="src/bs-sabilulungan.mp3" type="audio/mpeg">
+        Hapunten, browser anjeun teu ngadukung elemen audio.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
