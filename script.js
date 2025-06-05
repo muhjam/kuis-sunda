@@ -276,11 +276,24 @@ const quizScreen = document.getElementById('quiz-screen');
 const resultScreen = document.getElementById('result-screen');
 const questionElement = document.getElementById('question');
 const optionsElement = document.getElementById('options');
-const scoreElement = document.getElementById('score');
 const finalScoreElement = document.getElementById('final-score');
 const resultMessage = document.getElementById('result-message');
 const progressBar = document.querySelector('.progress-bar');
 const questionCount = document.getElementById('question-count');
+
+// Update score display with tahu icons
+function updateScore() {
+    const tahuIcons = document.querySelectorAll('.tahu-icon');
+    const scoreCount = Math.floor(score / 10); // Convert to 1-3 scale
+    
+    tahuIcons.forEach((icon, index) => {
+        if (index < scoreCount) {
+            icon.classList.add('earned');
+        } else {
+            icon.classList.remove('earned');
+        }
+    });
+}
 
 // Audio elements
 const correctSound = document.getElementById('correct-sound');
@@ -375,7 +388,7 @@ function selectAnswer(selectedIndex) {
     if (selectedIndex === question.answer) {
         optionElements[selectedIndex].classList.add('correct');
         score += 10;
-        scoreElement.textContent = score;
+        updateScore(); // Update tahu icons
         correctSound.play();
         optionElements[selectedIndex].classList.add('pulse');
     } else {
@@ -408,24 +421,41 @@ function showResult() {
     quizScreen.classList.add('hidden');
     resultScreen.classList.remove('hidden');
     
-    finalScoreElement.textContent = score;
+    const tahuCount = Math.floor(score / 10);
     
-    // Set result message based on score
-    const percentage = (score / (selectedQuestions.length * 10)) * 100;
-    if (percentage >= 80) {
-        resultMessage.textContent = 'Pinter! Pangaweruh anjeun ngeunaan tahu bulat kacida alusna!';
-    } else if (percentage >= 50) {
-        resultMessage.textContent = 'Alus! Tapi masih kudu ningkatkeun deui.';
+    // Set result message based on number of tahu earned
+    let message = '';
+    let subMessage = '';
+    
+    if (tahuCount === 0) {
+        message = 'Hampura, anjeun tacan meunang tahu bulat!';
+        subMessage = 'Hayu cobian deui, siapa nyaho meunangkeun tahu bulat leuwih loba!';
+    } else if (tahuCount === 1) {
+        message = 'Alus! Anjeun meunangkeun 1 tahu bulat!';
+        subMessage = 'Coba deui, pasti bisa meunangkeun leuwih loba tahu bulat!';
+    } else if (tahuCount === 2) {
+        message = 'Hébat! Anjeun meunangkeun 2 tahu bulat!';
+        subMessage = 'Sakali deui, pasti bisa meunangkeun 3 tahu bulat!';
     } else {
-        resultMessage.textContent = 'Tong nyerah! Ayo coba deui jeung pelajari leuwih loba ngeunaan tahu bulat.';
+        message = 'Luar biasa! Anjeun meunangkeun 3 tahu bulat!';
+        subMessage = 'Pangaweruh anjeun ngeunaan tahu bulat kacida alusna!';
     }
+    
+    // Update the result message with HTML for better formatting
+    resultMessage.innerHTML = `
+        <h3>${message}</h3>
+        <p>${subMessage}</p>
+        <div class="tahu-result">
+            ${Array(tahuCount).fill().map(() => `<img src="src/tahu.png" alt="Tahu Bulat" class="tahu-earned">`).join('')}
+        </div>
+    `;
 }
 
 // Restart quiz
 function restartQuiz() {
     currentQuestionIndex = 0;
     score = 0;
-    scoreElement.textContent = '0';
+    updateScore(); // Reset tahu icons
     resultScreen.classList.add('hidden');
     startQuiz();
 }
@@ -434,7 +464,7 @@ function restartQuiz() {
 function backToMenu() {
     currentQuestionIndex = 0;
     score = 0;
-    scoreElement.textContent = '0';
+    updateScore(); // Reset tahu icons
     resultScreen.classList.add('hidden');
     startScreen.classList.remove('hidden');
 }

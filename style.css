@@ -95,11 +95,75 @@ body::before {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.9);
     padding: 8px 15px;
     border-radius: 20px;
     font-weight: bold;
-    font-size: 1.1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#score-display {
+    display: flex;
+    gap: 5px;
+}
+
+.tahu-icon {
+    opacity: 0.3;
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+}
+
+.tahu-icon.earned {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.cokot-text {
+    color: #5D4037; /* Warna coklat tua yang kontras dengan background */
+    font-weight: 600;
+}
+
+/* Gaya untuk tampilan hasil kuis */
+#result-message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#result-message h3 {
+    color: #5D4037;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#result-message p {
+    color: #5D4037;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.tahu-result {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.tahu-earned {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    animation: bounce 0.5s ease-in-out;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 .screen {
@@ -423,14 +487,18 @@ body::before {
 }
 
 .score-display {
-    margin: 30px 0;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .final-score {
     font-size: 4rem;
     font-weight: bold;
     color: var(--accent);
-    margin: 20px 0;
+    margin-top: 20px;
     animation: bounce 1s ease;
 }
 
@@ -442,7 +510,7 @@ body::before {
 
 #result-message {
     font-size: 1.2rem;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 /* Animations */
