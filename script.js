@@ -397,8 +397,8 @@ function showResult() {
     const dateStr = `${dayName}, ${pad(now.getDate())} ${months[now.getMonth()]} ${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
     
     // Generate random amount between 100 and 10000, then format with dots as thousand separators
-    const randomAmount = Math.floor(Math.random() * 9900) + 100;
-    const formattedAmount = 'Rp ' + randomAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    const randomAmount = Math.floor(Math.random() * 10000000) + 100;
+    const formattedAmount = 'Rp Nuhun Kang/Téh';
     const amount = formattedAmount;
     const userName = playerName; // Use the player's name
     const txnNo = `IF-A5${Math.floor(100000 + Math.random()*900000)}`;

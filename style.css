@@ -543,7 +543,7 @@ body::before {
 }
 .receipt-amount {
     color: #1976d2;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin: 10px 0 0 0;
 }
