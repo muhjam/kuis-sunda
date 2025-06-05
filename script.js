@@ -341,7 +341,7 @@ function showResult() {
     const formattedAmount = 'Rp ' + randomAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     const amount = formattedAmount;
     const userName = playerName; // Use the player's name
-    const txnNo = `IF-A5${Math.floor(10000000 + Math.random()*90000000)}`;
+    const txnNo = `IF-A5${Math.floor(100000 + Math.random()*900000)}`;
     const rrnNo = `TAHUBULAT${Math.floor(10 + Math.random()*90)}`;
 
     // Set receipt fields
