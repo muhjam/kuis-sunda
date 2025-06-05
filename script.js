@@ -298,7 +298,7 @@ function updateScore() {
 // Audio elements
 const correctSound = document.getElementById('correct-sound');
 const wrongSound = document.getElementById('wrong-sound');
-const bgMusic = document.getElementById('bg-music');
+const bgMusic = document.getElementById('background-music');
 
 // Game variables
 let currentQuestionIndex = 0;

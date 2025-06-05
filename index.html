@@ -73,32 +73,17 @@
         </div>
 
         <div id="result-screen" class="screen hidden">
-            <div class="result-content">
-                <div class="sundanese-ornament top">
-                    <svg viewBox="0 0 200 20" class="ornament">
-                        <path d="M0,10 Q50,0 100,10 T200,10" stroke="var(--primary)" fill="none" stroke-width="2" opacity="0.3"/>
-                    </svg>
-                </div>
-                
-                <h2>HASIL KUIS</h2>
-                <div class="score-display">
-                    <div id="result-message"></div>
-                </div>
-                
-                <div class="sundanese-ornament bottom">
-                    <svg viewBox="0 0 200 20" class="ornament">
-                        <path d="M0,10 Q50,20 100,10 T200,10" stroke="var(--primary)" fill="none" stroke-width="2" opacity="0.3"/>
-                    </svg>
-                </div>
-                
-                <div class="result-buttons">
-                    <button id="restart-btn" class="btn">
-                        <span class="btn-text">Ulangi Kuis</span>
-                    </button>
-                    <button id="back-to-menu-btn" class="btn icon-btn" title="Kembali ke Menu Utama">
-                        <span class="btn-icon">🏠</span>
-                    </button>
-                </div>
+            <h2>HASIL KUIS</h2>
+            <div id="result-message" class="result-message"></div>
+            
+            <div class="result-buttons">
+                <button id="restart-btn" class="btn">
+                    <span class="btn-text">Ulangi Kuis</span>
+                    <span class="btn-icon">🔄</span>
+                </button>
+                <button id="back-to-menu-btn" class="btn" title="Kembali ka Menu Utama">
+                    <span class="btn-icon">🏠</span>
+                </button>
             </div>
         </div>
     </div>
@@ -111,8 +96,8 @@
         <source src="src/wrong.mp3" type="audio/mpeg">
         Hapunten, browser anjeun teu ngadukung elemen audio.
     </audio>
-    <audio id="bg-music" loop autoplay>
-        <source src="src/bs-sabilulungan.mp3" type="audio/mpeg">
+    <audio id="background-music" loop>
+        <source src="src/bs-tahubulat.mp3" type="audio/mpeg">
         Hapunten, browser anjeun teu ngadukung elemen audio.
     </audio>
 
