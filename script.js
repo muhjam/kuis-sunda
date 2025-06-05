@@ -131,10 +131,63 @@ function startBackgroundMusic() {
     }
 }
 
-// Start the quiz immediately when the page loads
+// Player name variable
+let playerName = 'Tamu';
+
+// Start the quiz after name input
 window.addEventListener('DOMContentLoaded', () => {
     startBackgroundMusic();
-    showRandomQuestion();
+    
+    // Show name input modal
+    const nameModal = document.getElementById('name-modal');
+    const playerNameInput = document.getElementById('player-name');
+    const startQuizBtn = document.getElementById('start-quiz-btn');
+    
+    // Focus on input when modal opens
+    playerNameInput.focus();
+    
+    // Show error function
+    const showError = (message) => {
+        const errorElement = document.getElementById('name-error');
+        errorElement.textContent = message;
+        errorElement.classList.add('show');
+        playerNameInput.classList.add('error');
+    };
+
+    // Hide error function
+    const hideError = () => {
+        const errorElement = document.getElementById('name-error');
+        errorElement.classList.remove('show');
+        playerNameInput.classList.remove('error');
+    };
+
+    // Start quiz when clicking the button
+    startQuizBtn.addEventListener('click', () => {
+        const name = playerNameInput.value.trim();
+        if (name !== '') {
+            playerName = name;
+            nameModal.style.display = 'none';
+            hideError();
+            showRandomQuestion();
+        } else {
+            showError('Mangga lebetkeun nami anjeun sateuacan ngamimitian!');
+            playerNameInput.focus();
+        }
+    });
+
+    // Hide error when user starts typing
+    playerNameInput.addEventListener('input', () => {
+        if (playerNameInput.value.trim() !== '') {
+            hideError();
+        }
+    });
+    
+    // Also start on Enter key
+    playerNameInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            startQuizBtn.click();
+        }
+    });
 });
 
 // Show current question
@@ -284,7 +337,7 @@ function showResult() {
     const dateStr = `${dayName}, ${pad(now.getDate())} ${months[now.getMonth()]} ${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
     
     const amount = 'Rp Gratis';
-    const userName = 'Tahu Bulat Lovers';
+    const userName = playerName; // Use the player's name
     const txnNo = `TXN${Math.floor(10000000 + Math.random()*90000000)}`;
     const rrnNo = `RRN${Math.floor(10000000 + Math.random()*90000000)}`;
 
@@ -307,7 +360,7 @@ function showResult() {
         checkmark.src = 'src/checked.png';
         checkmark.style.display = 'block';
         checkmark.style.animation = 'checkmark-animation 0.6s ease-in-out';
-        footer.innerHTML = '<span style="color:#4CAF50;font-weight:600;font-size:1.2em">LUNAS</span><br><span style="font-size:0.96em">Poto keun layarna, teras berekeun ka akang teteh kasep garelis anu boga tenan.</span>';
+        footer.innerHTML = '<span style="color:#4CAF50;font-weight:600;font-size:1.2em">LUNAS</span><br><span style="font-size:0.96em">Buktina berekeun ka akang teteh kasep garelis anu boga tenan.</span>';
     } else {
         statusElem.textContent = 'Belum Lunas';
         checkCircle.style.background = '#e74c3c';

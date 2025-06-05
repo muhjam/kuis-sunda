@@ -435,6 +435,70 @@ body::before {
     font-weight: bold;
 }
 
+/* Modal Styles */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.modal h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.name-input {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.name-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.name-input.error {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin: -10px 0 10px 0;
+    min-height: 20px;
+    text-align: left;
+    padding-left: 5px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
 /* Receipt Card Styles */
 .receipt-card {
     max-width: 320px;
