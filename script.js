@@ -71,6 +71,66 @@ const questions = [
         options: ["Ngagunakeun bahan impor", "Digoreng tanpa minyak", "Ngahasilkeun bentuk anyar tina olahan tahu", "Dijual ngan di toko élit"],
         answer: "Ngahasilkeun bentuk anyar tina olahan tahu",
         explanation: "Tahu bulat mangrupa inovasi tina olahan tahu tradisional anu ngahasilkeun produk anyar kalayan cita rasa jeung tekstur anu unik."
+    },
+    {
+        question: "Tahu bulat munggaran dikenal ti daérah mana?",
+        options: ["Bandung", "Yogyakarta", "Tasikmalaya", "Surabaya"],
+        answer: "Tasikmalaya",
+        explanation: "Tahu bulat mimitina populer ti daérah Tasikmalaya, Jawa Barat, sateuacan sumebar ka sakuliah Indonésia."
+    },
+    {
+        question: "Naon ciri has utama tahu bulat dibandingkeun tahu biasa?",
+        options: ["Rasana pedes", "Bentukna pipih jeung padet", "Digoreng kalayan saos husus", "Bentukna buleud sarta ngembang nalika digoreng"],
+        answer: "Bentukna buleud sarta ngembang nalika digoreng",
+        explanation: "Tahu bulat boga ciri has bentukna anu buleud sarta bakal ngembang nalika digoreng, ngahasilkeun tekstur anu garing di luar tapi empuk di jero."
+    },
+    {
+        question: "Naon strategi penjualan anu ngajadikeun tahu bulat populer?",
+        options: ["Dijual di réstoran gancang saji", "Dijual ngangkut ojek online", "Dijual nguriling kalayan mobil bak kabuka sarta sora panggero anu unik", "Dijual dina bungkus instan"],
+        answer: "Dijual nguriling kalayan mobil bak kabuka sarta sora panggero anu unik",
+        explanation: "Strategi penjualan nganggo mobil bak kabuka sarta sora panggero anu unik ngajadikeun tahu bulat gampang dipikanyaho sarta ditéang ku masarakat."
+    },
+    {
+        question: "Sora rekaman anu mindeng diputer ku padagang tahu bulat nyaéta...",
+        options: ["'Tahu bulat! Lezat dan pedas!'", "'Tahu bulat! Goreng hangat, enak nendang!'", "'Tahu bulat! Digoreng dadakan, lima ratusan, gurih-gurih nyoi!'", "'Tahu bulat! Ngan dinten ieu, diskon spesial!'"],
+        answer: "'Tahu bulat! Digoreng dadakan, lima ratusan, gurih-gurih nyoi!'",
+        explanation: "Rekaman sora anu khas ieu mindeng diputer ku padagang tahu bulat pikeun narik perhatian para pembeli."
+    },
+    {
+        question: "Naon bahan dasar utama dina nyieun tahu bulat?",
+        options: ["Tepung béas", "Kedelé", "Hui", "Tepung kanji"],
+        answer: "Kedelé",
+        explanation: "Sapertos tahu biasa, bahan dasar utama tahu bulat nyaéta kedelé anu diolah jadi tahu teras diolah deui janten tahu bulat."
+    },
+    {
+        question: "Tekstur tahu bulat anu digoréng leres biasana...",
+        options: ["Lembek di luar, teuas di jero", "Garing di luar, lembut di jero", "Garing di luar jeung di jero", "Lembek di luar jeung di jero"],
+        answer: "Garing di luar, lembut di jero",
+        explanation: "Tahu bulat anu sampurna biasana boga tekstur garing di luar tapi tetep lembut sarta empuk di jero."
+    },
+    {
+        question: "Ngaran kaulinan Android anu ngajadikeun tahu bulat langkung populer nyaéta...",
+        options: ["Tahu Goreng Mania", "Tahu Bulat", "Jualan Tahu", "Tahu Express"],
+        answer: "Tahu Bulat",
+        explanation: "Kaulinan 'Tahu Bulat' ngajadikeun jajanan ieu langkung populer deui di kalangan generasi muda."
+    },
+    {
+        question: "Saha pamekar kaulinan 'Tahu Bulat' anu viral di Indonésia?",
+        options: ["Gojek Games", "Garuda Games", "Own Games", "Tofu Studio"],
+        answer: "Own Games",
+        explanation: "Kaulinan 'Tahu Bulat' dikembangkeun ku Own Games sarta suksés narik minat loba pamaén di Indonésia."
+    },
+    {
+        question: "Tahu bulat biasana ditaburan ku bumbu di handap ieu, iwal...",
+        options: ["Balado", "Kéju", "BBQ", "Sambel héjo seger"],
+        answer: "Sambel héjo seger",
+        explanation: "Tahu bulat biasana dibarengan ku bumbu kawas balado, kéju, atawa BBQ, tapi henteu biasa dibarengan sambel héjo seger."
+    },
+    {
+        question: "Naha tahu bulat disebut 'digoréng dadakan'?",
+        options: ["Karana digoréng sateuacan dijual", "Karana digoréng di bumi engké dibawa", "Karana ngan dijual peuting", "Karana henteu kudu digoréng pikeun didahar"],
+        answer: "Karana digoréng sateuacan dijual",
+        explanation: "Istilah 'digoréng dadakan' nunjukkeun yén tahu bulat digoréng langsung di tempat dagang pikeun ngajaga kerenyahan sarta kasegeranana nalika didahar."
     }
 ];
 
