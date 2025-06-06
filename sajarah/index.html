@@ -96,7 +96,25 @@
             <h1 class="animate-on-scroll">Tahu Bulet</h1>
             <p class="subtitle">Warisan Kuliner Sunda nu Mendunia</p>
             <a href="#sejarah" class="cta-button">Jelajah Sajarah</a>
+               <!-- Circular Music Player -->
+               <div class="circular-music-player">
+                <div class="progress-ring">
+                    <svg class="progress-ring-circle" viewBox="0 0 100 100">
+                        <circle class="progress-ring-circle-bg" cx="50" cy="50" r="48" />
+                        <circle class="progress-ring-circle-fill" cx="50" cy="50" r="48" />
+                    </svg>
+                </div>
+                <button id="playPauseBtn" class="music-btn" aria-label="Putar Musik">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
         </div>
+         
+            <!-- Audio Element -->
+            <audio id="bgMusic" loop>
+                <source src="../src/bs-tahubulat.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         <div class="scroll-down">
             <span>ᮞ᮪ᮓᮧᮜ᮪ ᮊᮨ ᮘᮃᮥᮜ᮪</span>
             <i class="fas fa-chevron-down"></i>
@@ -216,5 +234,8 @@
     
     <!-- Load scroll animation -->
     <script src="scroll-animation.js"></script>
+    
+    <!-- Load music player -->
+    <script src="music-player.js"></script>
 </body>
 </html>
