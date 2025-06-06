@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Lembur Kuring - Tahu Bulat Sunda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>🥟 Festival Lembur Kuring 2025 🥟</h1>
+        <p>Zona Tahu-Tempe: Tahu Bulat Khas Sunda</p>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="content-card">
+                <h2>🥟 Tahu Bulat Sunda</h2>
+                <div class="food-image"></div>
+                <p><strong>Tahu Bulat</strong> adalah makanan tradisional Sunda yang terbuat dari tahu yang dibentuk bulat dan digoreng hingga renyah di luar namun lembut di dalam. Makanan ini sering disajikan dengan sambal kacang atau bumbu rujak yang memberikan cita rasa pedas dan segar.</p>
+                
+                <h3>Bahan-bahan Utama:</h3>
+                <div class="ingredients">
+                    <div class="ingredient-item">🥛 Tahu Putih</div>
+                    <div class="ingredient-item">🌶️ Cabai Rawit</div>
+                    <div class="ingredient-item">🥜 Kacang Tanah</div>
+                    <div class="ingredient-item">🧄 Bawang Putih</div>
+                    <div class="ingredient-item">🧅 Bawang Merah</div>
+                    <div class="ingredient-item">🍃 Daun Bawang</div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2>🎭 Nilai Budaya</h2>
+                <div class="philosophy">
+                    "Tahu bulat ngagambarkeun filosofi hirup urang Sunda: sederhana tapi eusub, basajan tapi ngamangsa, jeung bisa dinikmati ku sakabeh lapisan masarakat."
+                </div>
+                
+                <h3>Makna Filosofis:</h3>
+                <ul style="margin-left: 2rem; line-height: 1.8;">
+                    <li><strong>Bentuk Bulat:</strong> Melambangkan kesempurnaan dan keharmonisan</li>
+                    <li><strong>Warna Putih:</strong> Kesucian dan kejujuran hati</li>
+                    <li><strong>Tekstur Lembut:</strong> Sifat lemah lembut orang Sunda</li>
+                    <li><strong>Rasa Gurih:</strong> Kehidupan yang penuh makna</li>
+                </ul>
+
+                <h3>Tradisi Penyajian:</h3>
+                <p>Tahu bulat biasanya disajikan dalam acara-acara keluarga, arisan, atau sebagai jajanan sehari-hari. Penyajiannya menggunakan daun pisang atau piring tanah liat yang mencerminkan kedekatan dengan alam.</p>
+            </div>
+        </div>
+
+        <div class="cultural-section">
+            <h2>🌾 Sejarah dan Warisan Budaya</h2>
+            <p>Tahu bulat telah menjadi bagian dari khazanah kuliner Sunda sejak zaman dahulu. Makanan ini berkembang dari kreativitas nenek moyang dalam mengolah protein nabati menjadi makanan yang lezat dan bergizi. Proses pembuatannya yang sederhana namun memerlukan keahlian khusus mencerminkan kearifan lokal dalam pengolahan makanan.</p>
+            
+            <p>Dalam konteks sosial budaya Sunda, tahu bulat sering menjadi simbol kebersamaan. Cara makannya yang praktis memungkinkan orang untuk menikmatinya sambil bercerita atau berkumpul bersama keluarga dan teman-teman.</p>
+            
+            <div class="philosophy">
+                "Tahu bulat henteu ngan saukur kadaharan, tapi ogé jadi sarana pikeun ngariung jeung silaturahmi"
+                <br><em>(Tahu bulat bukan hanya sekedar makanan, tapi juga menjadi sarana untuk berkumpul dan bersilaturahmi)</em>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" onclick="toggleChatbot()">🤖</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                🥟 AI Kuliner Sunda
+                <button onclick="toggleChatbot()" style="float: right; background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer;">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message disclaimer">
+                    <em>⚠️ AI tiasa waé masihan jawaban anu lepat, mangga parios deui inpormasi anu dipasihkeun.</em>
+                </div>
+                <div class="message bot-message">
+                    Wilujeng sumping! Abdi siap ngabantosan patarosan ngeunaan Tahu Bulat jeung kuliner Sunda lianna. Naon anu badé ditaroskeun?
+                    <br><em>(Selamat datang! Saya siap membantu pertanyaan tentang Tahu Bulat dan kuliner Sunda lainnya. Apa yang ingin ditanyakan?)</em>
+                </div>
+            </div>
+            <div class="loading" id="loadingIndicator">Bot sedang mengetik...</div>
+            <div class="chatbot-input">
+                <input type="text" id="userInput" placeholder="Tanyakan tentang Tahu Bulat atau kuliner Sunda..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()">Kirim</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
