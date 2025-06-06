@@ -1,9 +1,68 @@
 let isChatbotOpen = false;
 
+// Floating arrow functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const heroSection = document.querySelector('.hero');
+    const floatingArrow = document.getElementById('floatingArrow');
+    const chatbotToggle = document.querySelector('.chatbot-toggle');
+    
+    // Show/hide arrow on scroll
+    function handleScroll() {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        if (window.scrollY > heroBottom && !isChatbotOpen) {
+            floatingArrow.classList.add('visible');
+        } else {
+            floatingArrow.classList.remove('visible');
+        }
+    }
+    
+    // Toggle chatbot when arrow is clicked
+    floatingArrow.addEventListener('click', function() {
+        toggleChatbot();
+        this.classList.remove('visible');
+    });
+    
+    // Hide arrow when chatbot is opened via toggle
+    chatbotToggle.addEventListener('click', function() {
+        floatingArrow.classList.remove('visible');
+    });
+    
+    window.addEventListener('scroll', handleScroll);
+    // Initial check in case page loads with scroll position past hero
+    handleScroll();
+});
+
 function toggleChatbot() {
     const chatbotWindow = document.getElementById('chatbotWindow');
+    const floatingArrow = document.getElementById('floatingArrow');
     isChatbotOpen = !isChatbotOpen;
-    chatbotWindow.style.display = isChatbotOpen ? 'flex' : 'none';
+    
+    if (isChatbotOpen) {
+        // Hide the floating arrow when opening the chat
+        floatingArrow.classList.remove('visible');
+        chatbotWindow.style.display = 'flex';
+        // Small delay to allow the display property to take effect before adding the active class
+        setTimeout(() => {
+            chatbotWindow.classList.add('active');
+        }, 10);
+        // Focus the input when opening
+        const input = document.getElementById('userInput');
+        if (input) input.focus();
+    } else {
+        chatbotWindow.classList.remove('active');
+        // Wait for the transition to complete before hiding
+        setTimeout(() => {
+            if (!isChatbotOpen) {
+                chatbotWindow.style.display = 'none';
+                // Show the floating arrow again when closing the chat if we're past the hero
+                const heroSection = document.querySelector('.hero');
+                const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+                if (window.scrollY > heroBottom) {
+                    floatingArrow.classList.add('visible');
+                }
+            }
+        }, 300);
+    }
 }
 
 function handleKeyPress(event) {
@@ -49,13 +108,13 @@ async function simulateGeminiResponse(message) {
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 500));
     const lower = message.toLowerCase();
 
-    // Jawaban acak untuk topik "tahu bulat"
-    if (lower.includes('tahu bulat')) {
+    // Jawaban acak untuk topik "tahu bulet"
+    if (lower.includes('tahu bulet')) {
         const responses = [
-            "🥟 Tahu bulat téh digoreng dadakan! Buleud, gurih, ngeunah pisan!<br><em>(Tahu bulat digoreng dadakan! Bulat, gurih, sangat enak!)</em>",
-            "Tahu bulat mangrupa cemilan favorit barudak Sunda! Biasana dijual di mobil pick-up.<br><em>(Tahu bulat adalah camilan favorit anak-anak Sunda! Biasanya dijual di mobil bak terbuka.)</em>",
-            "Buleud jeung renyah, tahu bulat jadi lambang saderhana tapi ngeunah!<br><em>(Bulat dan renyah, tahu bulat melambangkan kesederhanaan yang nikmat!)</em>",
-            "Tahu bulat, jajanan legendaris! Dijual di pinggir jalan, hargana murah meriah! 🚚<br><em>(Tahu bulat, jajanan legendaris! Dijual di pinggir jalan, harganya murah meriah!)</em>"
+            "🥟 Tahu bulet téh digoreng dadakan! Buleud, gurih, ngeunah pisan!<br><em>(Tahu bulet digoreng dadakan! Bulat, gurih, sangat enak!)</em>",
+            "Tahu bulet mangrupa cemilan favorit barudak Sunda! Biasana dijual di mobil pick-up.<br><em>(Tahu bulet adalah camilan favorit anak-anak Sunda! Biasanya dijual di mobil bak terbuka.)</em>",
+            "Buleud jeung renyah, tahu bulet jadi lambang saderhana tapi ngeunah!<br><em>(Bulat dan renyah, tahu bulet melambangkan kesederhanaan yang nikmat!)</em>",
+            "Tahu bulet, jajanan legendaris! Dijual di pinggir jalan, hargana murah meriah! 🚚<br><em>(Tahu bulet, jajanan legendaris! Dijual di pinggir jalan, harganya murah meriah!)</em>"
         ];
         return randomFrom(responses);
     }
@@ -72,7 +131,7 @@ async function simulateGeminiResponse(message) {
     // Filosofi atau makna
     if (lower.includes('filosofi') || lower.includes('makna')) {
         const responses = [
-            "🌀 Tahu bulat téh lambang kahirupan sederhana tapi bermakna.<br><em>(Tahu bulat adalah simbol hidup sederhana yang bermakna.)</em>",
+            "🌀 Tahu bulet téh lambang kahirupan sederhana tapi bermakna.<br><em>(Tahu bulet adalah simbol hidup sederhana yang bermakna.)</em>",
             "Bentukna buleud: ngalambangkeun kasampurnaan jeung kaharmonisan. ☯️<br><em>(Bentuknya bulat: melambangkan kesempurnaan dan keharmonisan.)</em>"
         ];
         return randomFrom(responses);
@@ -81,7 +140,7 @@ async function simulateGeminiResponse(message) {
     // Kuliner Sunda
     if (lower.includes('kuliner') || lower.includes('sunda')) {
         const responses = [
-            "Kuliner Sunda beunghar rasa! Nasi liwet, karedok, lotek, peuyeum, jeung tangtu wae... tahu bulat! 🍛",
+            "Kuliner Sunda beunghar rasa! Nasi liwet, karedok, lotek, peuyeum, jeung tangtu wae... tahu bulet! 🍛",
             "Sunda miboga rupa-rupa kadaharan tradisional: awug, surabi, bandros, jeung sejenna. 🥥🍠"
         ];
         return randomFrom(responses);
@@ -108,7 +167,7 @@ async function simulateGeminiResponse(message) {
     }
 
     // Default
-    return "Hapunten, abdi ngan tiasa ngawalon patarosan ngeunaan tahu bulat jeung kuliner Sunda. 🥟<br><em>(Maaf, saya hanya bisa menjawab pertanyaan tentang tahu bulat dan kuliner Sunda.)</em>";
+    return "Hapunten, abdi ngan tiasa ngawalon patarosan ngeunaan tahu bulet jeung kuliner Sunda. 🥟<br><em>(Maaf, saya hanya bisa menjawab pertanyaan tentang tahu bulet dan kuliner Sunda.)</em>";
 }
 
 // Fungsi bantu ambil jawaban acak
@@ -118,7 +177,7 @@ function randomFrom(array) {
 
 // ====== INI UNTUK PANGGIL GEMINI API ======
 async function callGeminiAPI(message) {
-    const API_KEY = 'AIzaSyCxcnolfhvVUHZnTkv4hy8HEVd36xBzMYQ'; // Ganti dengan API key Anda
+    const API_KEY = 'AIzaSyCxcnolfhvVUHZnTkv4hy8HEVd36xBzMYQ';
     const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent';
 
     const prompt = `
@@ -126,7 +185,7 @@ async function callGeminiAPI(message) {
 
     ✅ Topik yang boleh dijawab:
     - Sapaan (halo, hai, selamat datang)
-    - Tahu Bulat (asal-usul, resep, filosofi, harga, penyajian)
+    - Tahu Bulet (asal-usul, resep, filosofi, harga, penyajian)
     - Makanan atau minuman khas Sunda lainnya
     - Budaya kuliner Sunda (cara makan, nilai sosial, sejarah, kebiasaan)
 

@@ -1,136 +1,136 @@
 // Quiz Questions
 const questions = [
     {
-        question: "Tina mana asal usul tahu bulat?",
+        question: "Tina mana asal usul tahu bulet?",
         options: ["Jawa Barat", "Jawa Tengah", "Jawa Timur", "Sumatera Barat"],
         answer: "Jawa Barat",
-        explanation: "Tahu bulat asalna ti Jawa Barat sarta jadi jajanan khas Sunda anu populer."
+        explanation: "Tahu bulet asalna ti Jawa Barat sarta jadi jajanan khas Sunda anu populer."
     },
     {
-        question: "Naon bahan dasar pembuatan tahu bulat?",
+        question: "Naon bahan dasar pembuatan tahu bulet?",
         options: ["Tahu putih", "Tahu sumedang", "Tahu pong", "Tahu kuning"],
         answer: "Tahu pong",
-        explanation: "Tahu bulat biasana dijieun tina tahu pong anu geus dihaleuskeun sarta diaduk nepi ka kalis."
+        explanation: "Tahu bulet biasana dijieun tina tahu pong anu geus dihaleuskeun sarta diaduk nepi ka kalis."
     },
     {
-        question: "Kumaha cara nyieun tahu bulat anu bener?",
+        question: "Kumaha cara nyieun tahu bulet anu bener?",
         options: ["Digoreng langsung", "Direbus heula sateuacan digoreng", "Dikukus heula", "Dihaluskeun heula sarta dibuleudkeun"],
         answer: "Dihaluskeun heula sarta dibuleudkeun",
-        explanation: "Tahu bulat dijieun ku cara dihaleuskeun heula, dibuleudkeun, tuluy digoreng nepi ka garing."
+        explanation: "Tahu bulet dijieun ku cara dihaleuskeun heula, dibuleudkeun, tuluy digoreng nepi ka garing."
     },
     {
-        question: "Saha nu ngawanohkeun tahu bulat munggaran?",
+        question: "Saha nu ngawanohkeun tahu bulet munggaran?",
         options: ["Asep", "Dani Firmansyah", "Kang Asep", "Ente Sutisna"],
         answer: "Dani Firmansyah",
-        explanation: "Dani Firmansyah mangrupikeun tokoh anu ngawanohkeun tahu bulat ka masarakat luas ngaliwatan lagu viralna."
+        explanation: "Dani Firmansyah mangrupikeun tokoh anu ngawanohkeun tahu bulet ka masarakat luas ngaliwatan lagu viralna."
     },
     {
-        question: "Naon ngaran lagu anu ngajadikeun tahu bulat jadi populer?",
-        options: ["Tahu Bulat", "Juragan Tahu", "Tahu Bulatku", "Tahu Bulat Viral"],
-        answer: "Tahu Bulat",
-        explanation: "Lagu 'Tahu Bulat' anu dinyanyikeun ku Dani Firmansyah ngajadikeun tahu bulat jadi populer di masarakat."
+        question: "Naon ngaran lagu anu ngajadikeun tahu bulet jadi populer?",
+        options: ["Tahu Bulet", "Juragan Tahu", "Tahu Buletku", "Tahu Bulet Viral"],
+        answer: "Tahu Bulet",
+        explanation: "Lagu 'Tahu Bulet' anu dinyanyikeun ku Dani Firmansyah ngajadikeun tahu bulet jadi populer di masarakat."
     },
     {
-        question: "Kumaha ciri has sora panggero padagang tahu bulat?",
+        question: "Kumaha ciri has sora panggero padagang tahu bulet?",
         options: ["Nyaring", "Lembut", "Khas ngagorowok", "Nyanyi-nyanyi"],
         answer: "Khas ngagorowok",
-        explanation: "Padagang tahu bulat kaceluk ku sora panggerona anu khas ngagorowok ngagambarkeun daganganna."
+        explanation: "Padagang tahu bulet kaceluk ku sora panggerona anu khas ngagorowok ngagambarkeun daganganna."
     },
     {
-        question: "Dina taun sabaraha lagu Tahu Bulat viral?",
+        question: "Dina taun sabaraha lagu Tahu Bulet viral?",
         options: ["2013", "2014", "2015", "2016"],
         answer: "2015",
-        explanation: "Lagu Tahu Bulat viral dina taun 2015 sarta ngajadikeun jajanan ieu langkung populer deui."
+        explanation: "Lagu Tahu Bulet viral dina taun 2015 sarta ngajadikeun jajanan ieu langkung populer deui."
     },
     {
-        question: "Naon ngaran kaulinan mobile anu ngangkat tema tahu bulat?",
-        options: ["Tahu Bulat Mania", "Tahu Bulatku", "Tahu Bulat Viral", "Tahu Bulat: The Game"],
-        answer: "Tahu Bulat Mania",
-        explanation: "Kaulinan mobile 'Tahu Bulat Mania' mangrupikeun kaulinan anu ngangkat tema jualan tahu bulat."
+        question: "Naon ngaran kaulinan mobile anu ngangkat tema tahu bulet?",
+        options: ["Tahu Bulet Mania", "Tahu Buletku", "Tahu Bulet Viral", "Tahu Bulet: The Game"],
+        answer: "Tahu Bulet Mania",
+        explanation: "Kaulinan mobile 'Tahu Bulet Mania' mangrupikeun kaulinan anu ngangkat tema jualan tahu bulet."
     },
     {
-        question: "Sabaraha harga standar tahu bulat per bijina?",
+        question: "Sabaraha harga standar tahu bulet per bijina?",
         options: ["Rp 500", "Rp 1.000", "Rp 2.000", "Rp 5.000"],
         answer: "Rp 500",
-        explanation: "Harga standar tahu bulat biasana dijual dina harga Rp 500 per biji, tapi bisa béda-béda gumantung kana lokasi."
+        explanation: "Harga standar tahu bulet biasana dijual dina harga Rp 500 per biji, tapi bisa béda-béda gumantung kana lokasi."
     },
     {
-        question: "Kumaha cara ngajaga kerenyahan tahu bulat?",
+        question: "Kumaha cara ngajaga kerenyahan tahu bulet?",
         options: ["Disimpen dina wadah kedap udara", "Dikukus deui", "Digoreng deui", "Dilempeukkeun"],
         answer: "Digoreng deui",
-        explanation: "Pikeun ngajaga kerenyahan, tahu bulat bisa digoreng deui sakedap sateuacan didahar."
+        explanation: "Pikeun ngajaga kerenyahan, tahu bulet bisa digoreng deui sakedap sateuacan didahar."
     },
     {
-        question: "Salah sahiji alesan kunaon tahu bulat loba nu resep nyaéta...",
+        question: "Salah sahiji alesan kunaon tahu bulet loba nu resep nyaéta...",
         options: ["Mahal jeung eksklusif", "Gampang kapanggih jeung murah hargana", "Leuwih kuat tina tahu biasa", "Dijieun tina daging soy"],
         answer: "Gampang kapanggih jeung murah hargana",
-        explanation: "Tahu bulat populer sabab gampang kapanggih di pinggir jalan sarta hargana anu tepat pikeun sagala kalangan."
+        explanation: "Tahu bulet populer sabab gampang kapanggih di pinggir jalan sarta hargana anu tepat pikeun sagala kalangan."
     },
     {
-        question: "Tahu bulat ogé bisa disebut bagian tina inovasi kuliner Sunda sabab...",
+        question: "Tahu bulet ogé bisa disebut bagian tina inovasi kuliner Sunda sabab...",
         options: ["Ngagunakeun bahan impor", "Digoreng tanpa minyak", "Ngahasilkeun bentuk anyar tina olahan tahu", "Dijual ngan di toko élit"],
         answer: "Ngahasilkeun bentuk anyar tina olahan tahu",
-        explanation: "Tahu bulat mangrupa inovasi tina olahan tahu tradisional anu ngahasilkeun produk anyar kalayan cita rasa jeung tekstur anu unik."
+        explanation: "Tahu bulet mangrupa inovasi tina olahan tahu tradisional anu ngahasilkeun produk anyar kalayan cita rasa jeung tekstur anu unik."
     },
     {
-        question: "Tahu bulat munggaran dikenal ti daérah mana?",
+        question: "Tahu bulet munggaran dikenal ti daérah mana?",
         options: ["Bandung", "Yogyakarta", "Tasikmalaya", "Surabaya"],
         answer: "Tasikmalaya",
-        explanation: "Tahu bulat mimitina populer ti daérah Tasikmalaya, Jawa Barat, sateuacan sumebar ka sakuliah Indonésia."
+        explanation: "Tahu bulet mimitina populer ti daérah Tasikmalaya, Jawa Barat, sateuacan sumebar ka sakuliah Indonésia."
     },
     {
-        question: "Naon ciri has utama tahu bulat dibandingkeun tahu biasa?",
+        question: "Naon ciri has utama tahu bulet dibandingkeun tahu biasa?",
         options: ["Rasana pedes", "Bentukna pipih jeung padet", "Digoreng kalayan saos husus", "Bentukna buleud sarta ngembang nalika digoreng"],
         answer: "Bentukna buleud sarta ngembang nalika digoreng",
-        explanation: "Tahu bulat boga ciri has bentukna anu buleud sarta bakal ngembang nalika digoreng, ngahasilkeun tekstur anu garing di luar tapi empuk di jero."
+        explanation: "Tahu bulet boga ciri has bentukna anu buleud sarta bakal ngembang nalika digoreng, ngahasilkeun tekstur anu garing di luar tapi empuk di jero."
     },
     {
-        question: "Naon strategi penjualan anu ngajadikeun tahu bulat populer?",
+        question: "Naon strategi penjualan anu ngajadikeun tahu bulet populer?",
         options: ["Dijual di réstoran gancang saji", "Dijual ngangkut ojek online", "Dijual nguriling kalayan mobil bak kabuka sarta sora panggero anu unik", "Dijual dina bungkus instan"],
         answer: "Dijual nguriling kalayan mobil bak kabuka sarta sora panggero anu unik",
-        explanation: "Strategi penjualan nganggo mobil bak kabuka sarta sora panggero anu unik ngajadikeun tahu bulat gampang dipikanyaho sarta ditéang ku masarakat."
+        explanation: "Strategi penjualan nganggo mobil bak kabuka sarta sora panggero anu unik ngajadikeun tahu bulet gampang dipikanyaho sarta ditéang ku masarakat."
     },
     {
-        question: "Sora rekaman anu mindeng diputer ku padagang tahu bulat nyaéta...",
-        options: ["'Tahu bulat! Lezat dan pedas!'", "'Tahu bulat! Goreng hangat, enak nendang!'", "'Tahu bulat! Digoreng dadakan, lima ratusan, gurih-gurih nyoi!'", "'Tahu bulat! Ngan dinten ieu, diskon spesial!'"],
-        answer: "'Tahu bulat! Digoreng dadakan, lima ratusan, gurih-gurih nyoi!'",
-        explanation: "Rekaman sora anu khas ieu mindeng diputer ku padagang tahu bulat pikeun narik perhatian para pembeli."
+        question: "Sora rekaman anu mindeng diputer ku padagang tahu bulet nyaéta...",
+        options: ["'Tahu bulet! Lezat dan pedas!'", "'Tahu bulet! Goreng hangat, enak nendang!'", "'Tahu bulet! Digoreng dadakan, lima ratusan, gurih-gurih nyoi!'", "'Tahu bulet! Ngan dinten ieu, diskon spesial!'"],
+        answer: "'Tahu bulet! Digoreng dadakan, lima ratusan, gurih-gurih nyoi!'",
+        explanation: "Rekaman sora anu khas ieu mindeng diputer ku padagang tahu bulet pikeun narik perhatian para pembeli."
     },
     {
-        question: "Naon bahan dasar utama dina nyieun tahu bulat?",
+        question: "Naon bahan dasar utama dina nyieun tahu bulet?",
         options: ["Tepung béas", "Kedelé", "Hui", "Tepung kanji"],
         answer: "Kedelé",
-        explanation: "Sapertos tahu biasa, bahan dasar utama tahu bulat nyaéta kedelé anu diolah jadi tahu teras diolah deui janten tahu bulat."
+        explanation: "Sapertos tahu biasa, bahan dasar utama tahu bulet nyaéta kedelé anu diolah jadi tahu teras diolah deui janten tahu bulet."
     },
     {
-        question: "Tekstur tahu bulat anu digoréng leres biasana...",
+        question: "Tekstur tahu bulet anu digoréng leres biasana...",
         options: ["Lembek di luar, teuas di jero", "Garing di luar, lembut di jero", "Garing di luar jeung di jero", "Lembek di luar jeung di jero"],
         answer: "Garing di luar, lembut di jero",
-        explanation: "Tahu bulat anu sampurna biasana boga tekstur garing di luar tapi tetep lembut sarta empuk di jero."
+        explanation: "Tahu bulet anu sampurna biasana boga tekstur garing di luar tapi tetep lembut sarta empuk di jero."
     },
     {
-        question: "Ngaran kaulinan Android anu ngajadikeun tahu bulat langkung populer nyaéta...",
-        options: ["Tahu Goreng Mania", "Tahu Bulat", "Jualan Tahu", "Tahu Express"],
-        answer: "Tahu Bulat",
-        explanation: "Kaulinan 'Tahu Bulat' ngajadikeun jajanan ieu langkung populer deui di kalangan generasi muda."
+        question: "Ngaran kaulinan Android anu ngajadikeun tahu bulet langkung populer nyaéta...",
+        options: ["Tahu Goreng Mania", "Tahu Bulet", "Jualan Tahu", "Tahu Express"],
+        answer: "Tahu Bulet",
+        explanation: "Kaulinan 'Tahu Bulet' ngajadikeun jajanan ieu langkung populer deui di kalangan generasi muda."
     },
     {
-        question: "Saha pamekar kaulinan 'Tahu Bulat' anu viral di Indonésia?",
+        question: "Saha pamekar kaulinan 'Tahu Bulet' anu viral di Indonésia?",
         options: ["Gojek Games", "Garuda Games", "Own Games", "Tofu Studio"],
         answer: "Own Games",
-        explanation: "Kaulinan 'Tahu Bulat' dikembangkeun ku Own Games sarta suksés narik minat loba pamaén di Indonésia."
+        explanation: "Kaulinan 'Tahu Bulet' dikembangkeun ku Own Games sarta suksés narik minat loba pamaén di Indonésia."
     },
     {
-        question: "Tahu bulat biasana ditaburan ku bumbu di handap ieu, iwal...",
+        question: "Tahu bulet biasana ditaburan ku bumbu di handap ieu, iwal...",
         options: ["Balado", "Kéju", "BBQ", "Sambel héjo seger"],
         answer: "Sambel héjo seger",
-        explanation: "Tahu bulat biasana dibarengan ku bumbu kawas balado, kéju, atawa BBQ, tapi henteu biasa dibarengan sambel héjo seger."
+        explanation: "Tahu bulet biasana dibarengan ku bumbu kawas balado, kéju, atawa BBQ, tapi henteu biasa dibarengan sambel héjo seger."
     },
     {
-        question: "Naha tahu bulat disebut 'digoréng dadakan'?",
+        question: "Naha tahu bulet disebut 'digoréng dadakan'?",
         options: ["Karana digoréng sateuacan dijual", "Karana digoréng di bumi engké dibawa", "Karana ngan dijual peuting", "Karana henteu kudu digoréng pikeun didahar"],
         answer: "Karana digoréng sateuacan dijual",
-        explanation: "Istilah 'digoréng dadakan' nunjukkeun yén tahu bulat digoréng langsung di tempat dagang pikeun ngajaga kerenyahan sarta kasegeranana nalika didahar."
+        explanation: "Istilah 'digoréng dadakan' nunjukkeun yén tahu bulet digoréng langsung di tempat dagang pikeun ngajaga kerenyahan sarta kasegeranana nalika didahar."
     }
 ];
 
@@ -422,7 +422,7 @@ function showResult() {
     if (allCorrect) {
         statusElem.textContent = 'Berhasil';
         checkCircle.style.background = '#4CAF50'; // Green for success
-        checkmark.src = 'src/checked.png';
+        checkmark.src = '../src/checked.png';
         checkmark.style.display = 'block';
         checkmark.style.animation = 'checkmark-animation 0.6s ease-in-out';
         footer.innerHTML = '<span style="color:#4CAF50;font-weight:600;font-size:1.2em">LUNAS</span><br><span style="font-size:0.96em">Buktina tunjukeun ka akang teteh kasep garelis anu boga tenan.</span>';
@@ -436,12 +436,12 @@ function showResult() {
         checkmark.style.display = 'block';
         checkmark.style.animation = 'checkmark-animation 0.6s ease-in-out';
         const motivasi = [
-            'Tingkatkeun deui pangaweruh anjeun ngeunaan tahu bulat!',
+            'Tingkatkeun deui pangaweruh anjeun ngeunaan tahu bulet!',
             'Cobian deui, jawab sakabéh patarosan kalayan leres!',
-            'Sakali deui, pasti bisa meunangkeun tahu bulat gratis!',
-            'Ulah putus asa, cobian deui pikeun ngahontal 1 porsi tahu bulat!',
-            'Pangaweruh anjeun ngeunaan tahu bulat kedah ditingkatkeun deui!',
-            'Jawab sakabéh patarosan kalayan leres pikeun meunangkeun tahu bulat gratis!'
+            'Sakali deui, pasti bisa meunangkeun tahu bulet gratis!',
+            'Ulah putus asa, cobian deui pikeun ngahontal 1 porsi tahu bulet!',
+            'Pangaweruh anjeun ngeunaan tahu bulet kedah ditingkatkeun deui!',
+            'Jawab sakabéh patarosan kalayan leres pikeun meunangkeun tahu bulet gratis!'
         ];
         footer.innerHTML = '<span style="color:#e74c3c;font-weight:600">Belum Lunas</span><br><span style="font-size:0.96em">'+motivasi[Math.floor(Math.random()*motivasi.length)]+'</span>';
     }

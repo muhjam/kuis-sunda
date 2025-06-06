@@ -1,73 +1,189 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festival Lembur Kuring - Tahu Bulat Sunda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Sejarah Tahu Bulet - Warisan Budaya Sunda yang Mendunia</title>
+    <meta name="description" content="Temukan sejarah lengkap Tahu Bulet, makanan khas Sunda yang melegenda. Dari asal usul, filosofi, hingga perkembangannya menjadi makanan populer di Indonesia.">
+    <meta name="keywords" content="tahu bulet, sejarah tahu bulet, kuliner sunda, makanan tradisional, budaya sunda, kuliner indonesia, jajanan khas, warisan kuliner">
+    <meta name="author" content="Tahu Bulet Sunda">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tahubulat-sunda.com/sejarah">
+    <meta property="og:title" content="Sejarah Tahu Bulet - Warisan Budaya Sunda yang Mendunia">
+    <meta property="og:description" content="Temukan sejarah lengkap Tahu Bulet, makanan khas Sunda yang melegenda. Dari asal usul, filosofi, hingga perkembangannya menjadi makanan populer di Indonesia.">
+    <meta property="og:image" content="https://tahubulat-sunda.com/images/tahu-bulat-og.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sejarah Tahu Bulet - Warisan Budaya Sunda yang Mendunia">
+    <meta name="twitter:description" content="Temukan sejarah lengkap Tahu Bulet, makanan khas Sunda yang melegenda. Dari asal usul, filosofi, hingga perkembangannya menjadi makanan populer di Indonesia.">
+    <meta name="twitter:image" content="https://tahubulat-sunda.com/images/tahu-bulat-og.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../src/tahu.png">
+    <link rel="apple-touch-icon" href="../src/tahu.png">
+    <meta name="theme-color" content="#5D4037">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tahubulat-sunda.com/sejarah" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
-</head>
+    
+    <!-- Preload GSAP for animations -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" as="script">
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Sejarah Tahu Bulet - Warisan Budaya Sunda",
+      "description": "Temukan sejarah lengkap Tahu Bulet, makanan khas Sunda yang melegenda. Dari asal usul, filosofi, hingga perkembangannya menjadi makanan populer di Indonesia.",
+      "image": "https://tahubulat-sunda.com/images/tahu-bulat-og.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "Tahu Bulet Sunda",
+        "url": "https://tahubulat-sunda.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Tahu Bulet Sunda",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tahubulat-sunda.com/images/logo.png"
+        }
+      },
+      "datePublished": "2023-01-01",
+      "dateModified": "2025-06-07"
+    }
+    </script>
+    
+    <!-- Load GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
 <body>
-    <header class="header">
-        <h1>🥟 Festival Lembur Kuring 2025 🥟</h1>
-        <p>Zona Tahu-Tempe: Tahu Bulat Khas Sunda</p>
-    </header>
+    <nav>
+        <div class="nav-logo">Tahu Bulet Sunda</div>
+        <div class="nav-links">
+            <a href="#home">Utami</a>
+            <a href="#sejarah">Sajarah</a>
+            <a href="#budaya">Kabudayaan</a>
+            <a href="#filosofi">Filosofi</a>            
+        </div>
+        <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        </button>
+    </nav>
 
-    <div class="container">
-        <div class="main-content">
-            <div class="content-card">
-                <h2>🥟 Tahu Bulat Sunda</h2>
-                <div class="food-image"></div>
-                <p><strong>Tahu Bulat</strong> adalah makanan tradisional Sunda yang terbuat dari tahu yang dibentuk bulat dan digoreng hingga renyah di luar namun lembut di dalam. Makanan ini sering disajikan dengan sambal kacang atau bumbu rujak yang memberikan cita rasa pedas dan segar.</p>
-                
-                <h3>Bahan-bahan Utama:</h3>
-                <div class="ingredients">
-                    <div class="ingredient-item">🥛 Tahu Putih</div>
-                    <div class="ingredient-item">🌶️ Cabai Rawit</div>
-                    <div class="ingredient-item">🥜 Kacang Tanah</div>
-                    <div class="ingredient-item">🧄 Bawang Putih</div>
-                    <div class="ingredient-item">🧅 Bawang Merah</div>
-                    <div class="ingredient-item">🍃 Daun Bawang</div>
-                </div>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="animate-on-scroll">Tahu Bulet</h1>
+            <p class="subtitle">Warisan Kuliner Sunda nu Mendunia</p>
+            <a href="#sejarah" class="cta-button">Jelajah Sajarah</a>
+        </div>
+        <div class="scroll-down">
+            <span>ᮞ᮪ᮓᮧᮜ᮪ ᮊᮨ ᮘᮃᮥᮜ᮪</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="sejarah" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sajarah Tahu Bulet</h2>
+                <div class="divider"></div>
             </div>
-
-            <div class="content-card">
-                <h2>🎭 Nilai Budaya</h2>
-                <div class="philosophy">
-                    "Tahu bulat ngagambarkeun filosofi hirup urang Sunda: sederhana tapi eusub, basajan tapi ngamangsa, jeung bisa dinikmati ku sakabeh lapisan masarakat."
+            <div class="content-grid">
+                <div class="content-image">
+                    <img src="https://cdn0-production-images-kly.akamaized.net/pu6zD0-c7vpiD2z8sT3ajgAGSZQ=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2227920/original/038289800_1527241769-resep-cara-membuat-tahu-bulat-pedas.jpg" alt="Sejarah Tahu Bulet">
                 </div>
-                
-                <h3>Makna Filosofis:</h3>
-                <ul style="margin-left: 2rem; line-height: 1.8;">
-                    <li><strong>Bentuk Bulat:</strong> Melambangkan kesempurnaan dan keharmonisan</li>
-                    <li><strong>Warna Putih:</strong> Kesucian dan kejujuran hati</li>
-                    <li><strong>Tekstur Lembut:</strong> Sifat lemah lembut orang Sunda</li>
-                    <li><strong>Rasa Gurih:</strong> Kehidupan yang penuh makna</li>
-                </ul>
-
-                <h3>Tradisi Penyajian:</h3>
-                <p>Tahu bulat biasanya disajikan dalam acara-acara keluarga, arisan, atau sebagai jajanan sehari-hari. Penyajiannya menggunakan daun pisang atau piring tanah liat yang mencerminkan kedekatan dengan alam.</p>
+                <div class="content-text">
+                    <p>Tahu bulet nyaéta salasahiji jajanan tradisional khas Sunda nu geus aya ti baheula. Mimitina asal tina kréativitas masarakat dina ngolah tahu sangkan awét tur boga gizi luhur.</p>
+                    <p>Ti awalna, tahu bulet dijieun pikeun bekel lalampahan sabab awét tur gampang dibawa. Lila-lila, tuangeun ieu mekar jadi jajanan populér nu dijual di sagala wewengkon Jawa Barat.</p>
+                </div>                
             </div>
         </div>
+    </section>
 
-        <div class="cultural-section">
-            <h2>🌾 Sejarah dan Warisan Budaya</h2>
-            <p>Tahu bulat telah menjadi bagian dari khazanah kuliner Sunda sejak zaman dahulu. Makanan ini berkembang dari kreativitas nenek moyang dalam mengolah protein nabati menjadi makanan yang lezat dan bergizi. Proses pembuatannya yang sederhana namun memerlukan keahlian khusus mencerminkan kearifan lokal dalam pengolahan makanan.</p>
-            
-            <p>Dalam konteks sosial budaya Sunda, tahu bulat sering menjadi simbol kebersamaan. Cara makannya yang praktis memungkinkan orang untuk menikmatinya sambil bercerita atau berkumpul bersama keluarga dan teman-teman.</p>
-            
-            <div class="philosophy">
-                "Tahu bulat henteu ngan saukur kadaharan, tapi ogé jadi sarana pikeun ngariung jeung silaturahmi"
-                <br><em>(Tahu bulat bukan hanya sekedar makanan, tapi juga menjadi sarana untuk berkumpul dan bersilaturahmi)</em>
+    <section id="budaya" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Budaya Kuliner</h2>
+                <div class="divider"></div>
             </div>
-        </div>
-    </div>
+            <div class="content-grid reverse">
+                <div class="content-text">
+                    <p>Tahu bulet lain ukur kadaharan, tapi ogé jadi bagian tina budaya kuliner Sunda. Biasana dijual ku gerobak atawa motor, tukang tahu bulet sok ngageroan klakson khas nu jadi ciri maranéhna.</p>
+                    <p>Tuangeun ieu sok aya dina rupa-rupa acara adat Sunda, ti kawinan, khitanan, nepi ka acara kulawarga. Cara nyayikeunana basajan tapi ngeunah, matak dipikaresep ku sagala lapisan.</p>
+                </div>
+                <div class="content-image">
+                    <img src="https://i.ytimg.com/vi/E7Nd4ytvciw/maxresdefault.jpg" alt="Budaya Tahu Bulet">
+                </div>
+            </div>
+        </div>        
+    </section>
 
-    <!-- Chatbot Container -->
+    <section id="filosofi" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Filosofi Tahu Bulet</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="philosophy-grid">
+                <div class="philosophy-item">
+                    <div class="icon">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                    <h3>Kesederhanaan</h3>
+                    <p>Bentukna nu buleut jeung basajan ngagambarkeun kesederhanaan masarakat Sunda nu ngajunjung luhur nilai-nilai kasahajaan.</p>
+                </div>
+                <div class="philosophy-item">
+                    <div class="icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Kabersamaan</h3>
+                    <p>Sok didahar babarengan, tahu bulet jadi lambang kabersamaan jeung kekeluargaan dina budaya Sunda.</p>
+                </div>
+                <div class="philosophy-item">
+                    <div class="icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Asih Ka Tanah Air</h3>
+                    <p>Sakumaha warisan kuliner, tahu bulet ngagambarkeun rasa asih ka kekayaan kuliner Nusantara.</p>
+                </div>
+            </div>
+        </div>        
+    </section>
+
+    <!-- Simple Chatbot -->
     <div class="chatbot-container">
-        <button class="chatbot-toggle" onclick="toggleChatbot()">🤖</button>
+        <div class="chatbot-toggle-wrapper">
+            <!-- Floating Arrow -->
+            <div class="floating-arrow" id="floatingArrow">
+                <span>Tanya AI leuwih Lengkap</span>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <button class="chatbot-toggle" onclick="toggleChatbot()"><i class="fas fa-comment-dots"></i></button>
+        </div>
         <div class="chatbot-window" id="chatbotWindow">
             <div class="chatbot-header">
-                🥟 AI Kuliner Sunda
+                Tatanya AI
                 <button onclick="toggleChatbot()" style="float: right; background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer;">×</button>
             </div>
             <div class="chatbot-messages" id="chatbotMessages">
@@ -75,18 +191,30 @@
                     <em>⚠️ AI tiasa waé masihan jawaban anu lepat, mangga parios deui inpormasi anu dipasihkeun.</em>
                 </div>
                 <div class="message bot-message">
-                    Wilujeng sumping! Abdi siap ngabantosan patarosan ngeunaan Tahu Bulat jeung kuliner Sunda lianna. Naon anu badé ditaroskeun?
-                    <br><em>(Selamat datang! Saya siap membantu pertanyaan tentang Tahu Bulat dan kuliner Sunda lainnya. Apa yang ingin ditanyakan?)</em>
-                </div>
+                    Wilujeng sumping! Upami badé naroskeun langkung lengkep ngeunaan Tahu Bulet, mangga taroskeun di dieu. Abdi siap ngabantosan patarosan ngeunaan kuliner Sunda lianna!
+                    <br><em>(Selamat datang! Jika ingin bertanya lebih lengkap tentang Tahu Bulet, silakan tanyakan di sini. Saya siap membantu pertanyaan tentang kuliner Sunda lainnya!)</em>
+                </div>                
             </div>
             <div class="loading" id="loadingIndicator">Bot sedang mengetik...</div>
             <div class="chatbot-input">
-                <input type="text" id="userInput" placeholder="Tanyakan tentang Tahu Bulat atau kuliner Sunda..." onkeypress="handleKeyPress(event)">
+                <input type="text" id="userInput" placeholder="Tanyakan tentang Tahu Bulet atau kuliner Sunda..." onkeypress="handleKeyPress(event)">
                 <button onclick="sendMessage()">Kirim</button>
             </div>
         </div>
     </div>
 
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tahu Bulet Sunda - IF A05</p>
+        </div>
+    </footer>
+    <!-- Load our main script -->
     <script src="script.js"></script>
+    
+    <!-- Load Google's Generative AI SDK -->
+    <script src="https://www.gstatic.com/generative-ai/sdk-1.0.0/generative-ai.min.js"></script>
+    
+    <!-- Load scroll animation -->
+    <script src="scroll-animation.js"></script>
 </body>
 </html>

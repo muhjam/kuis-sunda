@@ -19,7 +19,7 @@
 
 body {
     background-color: #5D4037;
-    background-image: url('src/bg-batik.jpg');
+    background-image: url('../src/bg-batik.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
