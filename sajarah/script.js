@@ -110,11 +110,16 @@ async function simulateGeminiResponse(message) {
 
     // Jawaban acak untuk topik "tahu bulet"
     if (lower.includes('tahu bulet')) {
+        // Special case for origin city
+        if (lower.includes('asal') && (lower.includes('kota') || lower.includes('daerah') || lower.includes('tempat'))) {
+            return "🥟 Tahu bulet asalna ti Kota Tasikmalaya, Jawa Barat! Salahsiji jajanan khas Sunda anu jadi ikon kuliner di dinya. <br><em>(Tahu bulet berasal dari Kota Tasikmalaya, Jawa Barat! Salah satu jajanan khas Sunda yang menjadi ikon kuliner di sana.)</em>";
+        }
+        
         const responses = [
             "🥟 Tahu bulet téh digoreng dadakan! Buleud, gurih, ngeunah pisan!<br><em>(Tahu bulet digoreng dadakan! Bulat, gurih, sangat enak!)</em>",
             "Tahu bulet mangrupa cemilan favorit barudak Sunda! Biasana dijual di mobil pick-up.<br><em>(Tahu bulet adalah camilan favorit anak-anak Sunda! Biasanya dijual di mobil bak terbuka.)</em>",
             "Buleud jeung renyah, tahu bulet jadi lambang saderhana tapi ngeunah!<br><em>(Bulat dan renyah, tahu bulet melambangkan kesederhanaan yang nikmat!)</em>",
-            "Tahu bulet, jajanan legendaris! Dijual di pinggir jalan, hargana murah meriah! 🚚<br><em>(Tahu bulet, jajanan legendaris! Dijual di pinggir jalan, harganya murah meriah!)</em>"
+            "Tahu bulet, jajanan legendaris ti Tasikmalaya! Dijual di pinggir jalan, hargana murah meriah! 🚚<br><em>(Tahu bulet, jajanan legendaris dari Tasikmalaya! Dijual di pinggir jalan, harganya murah meriah!)</em>"
         ];
         return randomFrom(responses);
     }
