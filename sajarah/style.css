@@ -1978,7 +1978,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(93, 64, 55, 0.7);
+    background: rgba(139, 106, 95, 0.7);
     z-index: -1;
 }
 
@@ -1989,17 +1989,6 @@ body::before {
     position: relative;
     z-index: 1;
     box-sizing: border-box;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(93, 64, 55, 0.7);
-    z-index: -1;
 }
 
 .chatbot-container {
