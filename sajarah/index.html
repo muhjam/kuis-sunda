@@ -2,14 +2,17 @@
 <html lang="id" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <!-- Primary Meta Tags -->
     <title>Sejarah Tahu Bulet - Warisan Budaya Sunda yang Mendunia</title>
     <meta name="description" content="Temukan sejarah lengkap Tahu Bulet, makanan khas Sunda yang melegenda. Dari asal usul, filosofi, hingga perkembangannya menjadi makanan populer di Indonesia.">
     <meta name="keywords" content="tahu bulet, sejarah tahu bulet, kuliner sunda, makanan tradisional, budaya sunda, kuliner indonesia, jajanan khas, warisan kuliner">
-    <meta name="author" content="Tahu Bulet Sunda">
+    <meta name="author" content="Tahu Bulet">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
@@ -56,12 +59,12 @@
       "image": "https://tahubulat-sunda.com/images/tahu-bulat-og.jpg",
       "author": {
         "@type": "Organization",
-        "name": "Tahu Bulet Sunda",
+        "name": "Tahu Bulet",
         "url": "https://tahubulat-sunda.com"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Tahu Bulet Sunda",
+        "name": "Tahu Bulet",
         "logo": {
           "@type": "ImageObject",
           "url": "https://tahubulat-sunda.com/images/logo.png"
@@ -78,7 +81,7 @@
 
 <body>
     <nav>
-        <div class="nav-logo">Tahu Bulet Sunda</div>
+        <div class="nav-logo">Tahu Bulet</div>
         <div class="nav-links">
             <a href="#home">Utami</a>
             <a href="#sejarah">Sajarah</a>
@@ -215,15 +218,20 @@
             </div>
             <div class="loading" id="loadingIndicator">Bot sedang mengetik...</div>
             <div class="chatbot-input">
-                <input type="text" id="userInput" placeholder="Tanyakan tentang Tahu Bulet atau kuliner Sunda..." onkeypress="handleKeyPress(event)">
-                <button onclick="sendMessage()">Kirim</button>
+                <input type="text" 
+                       id="userInput" 
+                       placeholder="Tanyakan tentang Tahu Bulet..." 
+                       onkeypress="handleKeyPress(event)"
+                       style="font-size: 16px;"
+                       inputmode="text">
+                <button type="button" onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     </div>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Tahu Bulet Sunda - IF A05</p>
+            <p>&copy; 2025 Tahu Bulet - ᮄᮖ᮪ ᮃᮐᮃᮔ᮪ ᮐᮅᮃ᮪</p>
         </div>
     </footer>
     <!-- Load our main script -->

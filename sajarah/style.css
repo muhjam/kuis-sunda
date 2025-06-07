@@ -1058,8 +1058,9 @@ body.scrolled .nav-links a {
     transition: all 0.3s ease;
     opacity: 0;
     pointer-events: none;
-    margin: 0 -50px -45px 0;
-    position: relative;
+    margin: 0 0 -45px 0;
+    position: fixed;
+    right: 80px;
     white-space: nowrap;
     line-height: 1;
 }
@@ -1314,7 +1315,7 @@ nav {
     animation: slideIn 0.3s ease;
     word-wrap: break-word;
     line-height: 1.5;
-    font-size: 1.1rem; /* Ukuran font diperbesar */
+    font-size: 1.5rem; /* Ukuran font diperbesar */
 }
 
 @keyframes slideIn {
@@ -1328,6 +1329,7 @@ nav {
     border: 1px solid #ddd;
     margin-right: auto;
     margin-left: 0;
+    font-size: 2rem;
 }
 
 .user-message {
@@ -1734,6 +1736,20 @@ body {
     z-index: 1;
 }
 
+/* Prevent zoom on iOS input focus */
+@supports (-webkit-touch-callout: none) {
+    input, textarea, select, button {
+        font-size: 16px !important;
+    }
+    
+    /* Fix for iOS 15+ */
+    @supports (font: -apple-system-body) and (-webkit-touch-callout: none) {
+        input, textarea, select, button {
+            font-size: 16px !important;
+        }
+    }
+}
+
 /* Desktop Styles */
 @media (min-width: 1024px) {
     body, html {
@@ -1831,12 +1847,6 @@ body {
     .chatbot-container {
         right: 15px;
         bottom: 20px;
-    }
-    
-    .chatbot-toggle-wrapper {
-        flex-direction: column;
-        align-items: flex-end;
-        align-items: center;
     }
     
     .chatbot-toggle {
@@ -2072,7 +2082,7 @@ body::before {
     padding: 10px 15px;
     border-radius: 15px;
     line-height: 1.4;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 }
 
 .bot-message {
@@ -2090,7 +2100,7 @@ body::before {
 }
 
 .disclaimer {
-    font-size: 0.75rem;
+    font-size: 1.2rem;
     color: #666;
     text-align: center;
     margin: 5px 0 15px;
@@ -2101,19 +2111,27 @@ body::before {
 
 .chatbot-input {
     display: flex;
-    padding: 15px;
-    background: white;
+    padding: 10px;
+    background: #fff;
     border-top: 1px solid #eee;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .chatbot-input input {
     flex: 1;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border: 1px solid #ddd;
-    border-radius: 25px;
+    border-radius: 20px;
     margin-right: 10px;
-    font-size: 0.9rem;
+    font-size: 16px !important;
+    line-height: 1.4;
     outline: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    touch-action: manipulation;
 }
 
 .chatbot-input #budaya {
@@ -2573,3 +2591,7 @@ section h2 {
     }
 }
 
+
+footer p{
+    font-size: 1.2rem;
+}
