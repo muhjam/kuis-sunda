@@ -432,7 +432,7 @@ function showResult() {
     } else {
         statusElem.textContent = 'Belum Lunas';
         checkCircle.style.background = '#e74c3c';
-        checkmark.src = 'src/wrong.png'; // Make sure you have a wrong.png in src/
+        checkmark.src = '../src/wrong.png'; // Make sure you have a wrong.png in src/
         checkmark.style.display = 'block';
         checkmark.style.animation = 'checkmark-animation 0.6s ease-in-out';
         const motivasi = [
