@@ -108,18 +108,18 @@ async function simulateGeminiResponse(message) {
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 500));
     const lower = message.toLowerCase();
 
-    // Jawaban acak untuk topik "tahu bulet"
-    if (lower.includes('tahu bulet')) {
+    // Jawaban acak untuk topik "tahu bulat"
+    if (lower.includes('tahu bulat')) {
         // Special case for origin city
         if (lower.includes('asal') && (lower.includes('kota') || lower.includes('daerah') || lower.includes('tempat'))) {
-            return "🥟 Tahu bulet asalna ti Kota Tasikmalaya, Jawa Barat! Salahsiji jajanan khas Sunda anu jadi ikon kuliner di dinya. <br><em>(Tahu bulet berasal dari Kota Tasikmalaya, Jawa Barat! Salah satu jajanan khas Sunda yang menjadi ikon kuliner di sana.)</em>";
+            return "🥟 Tahu bulat asalna ti Kota Tasikmalaya, Jawa Barat! Salahsiji jajanan khas Sunda anu jadi ikon kuliner di dinya. <br><em>(Tahu bulat berasal dari Kota Tasikmalaya, Jawa Barat! Salah satu jajanan khas Sunda yang menjadi ikon kuliner di sana.)</em>";
         }
         
         const responses = [
-            "🥟 Tahu bulet téh digoreng dadakan! Buleud, gurih, ngeunah pisan!<br><em>(Tahu bulet digoreng dadakan! Bulat, gurih, sangat enak!)</em>",
-            "Tahu bulet mangrupa cemilan favorit barudak Sunda! Biasana dijual di mobil pick-up.<br><em>(Tahu bulet adalah camilan favorit anak-anak Sunda! Biasanya dijual di mobil bak terbuka.)</em>",
-            "Buleud jeung renyah, tahu bulet jadi lambang saderhana tapi ngeunah!<br><em>(Bulat dan renyah, tahu bulet melambangkan kesederhanaan yang nikmat!)</em>",
-            "Tahu bulet, jajanan legendaris ti Tasikmalaya! Dijual di pinggir jalan, hargana murah meriah! 🚚<br><em>(Tahu bulet, jajanan legendaris dari Tasikmalaya! Dijual di pinggir jalan, harganya murah meriah!)</em>"
+            "🥟 Tahu bulat téh digoreng dadakan! Buleud, gurih, ngeunah pisan!<br><em>(Tahu bulat digoreng dadakan! Bulat, gurih, sangat enak!)</em>",
+            "Tahu bulat mangrupa cemilan favorit barudak Sunda! Biasana dijual di mobil pick-up.<br><em>(Tahu bulat adalah camilan favorit anak-anak Sunda! Biasanya dijual di mobil bak terbuka.)</em>",
+            "Buleud jeung renyah, tahu bulat jadi lambang saderhana tapi ngeunah!<br><em>(Bulat dan renyah, tahu bulat melambangkan kesederhanaan yang nikmat!)</em>",
+            "Tahu bulat, jajanan legendaris ti Tasikmalaya! Dijual di pinggir jalan, hargana murah meriah! 🚚<br><em>(Tahu bulat, jajanan legendaris dari Tasikmalaya! Dijual di pinggir jalan, harganya murah meriah!)</em>"
         ];
         return randomFrom(responses);
     }
@@ -136,7 +136,7 @@ async function simulateGeminiResponse(message) {
     // Filosofi atau makna
     if (lower.includes('filosofi') || lower.includes('makna')) {
         const responses = [
-            "🌀 Tahu bulet téh lambang kahirupan sederhana tapi bermakna.<br><em>(Tahu bulet adalah simbol hidup sederhana yang bermakna.)</em>",
+            "🌀 Tahu bulat téh lambang kahirupan sederhana tapi bermakna.<br><em>(Tahu bulat adalah simbol hidup sederhana yang bermakna.)</em>",
             "Bentukna buleud: ngalambangkeun kasampurnaan jeung kaharmonisan. ☯️<br><em>(Bentuknya bulat: melambangkan kesempurnaan dan keharmonisan.)</em>"
         ];
         return randomFrom(responses);
@@ -145,7 +145,7 @@ async function simulateGeminiResponse(message) {
     // Kuliner Sunda
     if (lower.includes('kuliner') || lower.includes('sunda')) {
         const responses = [
-            "Kuliner Sunda beunghar rasa! Nasi liwet, karedok, lotek, peuyeum, jeung tangtu wae... tahu bulet! 🍛",
+            "Kuliner Sunda beunghar rasa! Nasi liwet, karedok, lotek, peuyeum, jeung tangtu wae... tahu bulat! 🍛",
             "Sunda miboga rupa-rupa kadaharan tradisional: awug, surabi, bandros, jeung sejenna. 🥥🍠"
         ];
         return randomFrom(responses);
@@ -172,7 +172,7 @@ async function simulateGeminiResponse(message) {
     }
 
     // Default
-    return "Hapunten, abdi ngan tiasa ngawalon patarosan ngeunaan tahu bulet jeung kuliner Sunda. 🥟<br><em>(Maaf, saya hanya bisa menjawab pertanyaan tentang tahu bulet dan kuliner Sunda.)</em>";
+    return "Hapunten, abdi ngan tiasa ngawalon patarosan ngeunaan tahu bulat jeung kuliner Sunda. 🥟<br><em>(Maaf, saya hanya bisa menjawab pertanyaan tentang tahu bulat dan kuliner Sunda.)</em>";
 }
 
 // Fungsi bantu ambil jawaban acak
@@ -190,7 +190,7 @@ async function callGeminiAPI(message) {
 
     ✅ Topik yang boleh dijawab:
     - Sapaan (halo, hai, selamat datang)
-    - Tahu Bulet (asal-usul, resep, filosofi, harga, penyajian)
+    - Tahu Bulat (asal-usul, resep, filosofi, harga, penyajian)
     - Makanan atau minuman khas Sunda lainnya
     - Budaya kuliner Sunda (cara makan, nilai sosial, sejarah, kebiasaan)
 
