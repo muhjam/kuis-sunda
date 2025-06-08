@@ -1,40 +1,16 @@
 // Quiz Questions
 const questions = [
     {
-        question: "Tina mana asal usul tahu bulat?",
-        options: ["Jawa Barat", "Jawa Tengah", "Jawa Timur", "Sumatera Barat"],
-        answer: "Jawa Barat",
-        explanation: "Tahu bulat asalna ti Jawa Barat sarta jadi jajanan khas Sunda anu populer."
-    },
-    {
-        question: "Naon bahan dasar pembuatan tahu bulat?",
-        options: ["Tahu putih", "Tahu sumedang", "Tahu pong", "Tahu kuning"],
-        answer: "Tahu pong",
-        explanation: "Tahu bulat biasana dijieun tina tahu pong anu geus dihaleuskeun sarta diaduk nepi ka kalis."
-    },
-    {
-        question: "Kumaha cara nyieun tahu bulat anu bener?",
-        options: ["Digoreng langsung", "Direbus heula sateuacan digoreng", "Dikukus heula", "Dihaluskeun heula sarta dibuleudkeun"],
-        answer: "Dihaluskeun heula sarta dibuleudkeun",
-        explanation: "Tahu bulat dijieun ku cara dihaleuskeun heula, dibuleudkeun, tuluy digoreng nepi ka garing."
+        question: "Kumaha mimiti cara nyieun tahu bulat anu bener?",
+        options: ["Digoreng langsung", "Direbus heula sateuacan digoreng", "Dikukus heula", "Hancurkan tahu putih hingga halus dan peras untuk mengurangi kadar airnya"],
+        answer: "Hancurkan tahu putih hingga halus dan peras untuk mengurangi kadar airnya",
+        explanation: ""
     },
     {
         question: "Saha nu ngawanohkeun tahu bulat munggaran?",
-        options: ["Asep", "Dani Firmansyah", "Kang Asep", "Ente Sutisna"],
-        answer: "Dani Firmansyah",
-        explanation: "Dani Firmansyah mangrupikeun tokoh anu ngawanohkeun tahu bulat ka masarakat luas ngaliwatan lagu viralna."
-    },
-    {
-        question: "Naon ngaran lagu anu ngajadikeun tahu bulat jadi populer?",
-        options: ["Tahu Bulat", "Juragan Tahu", "Tahu Bulatku", "Tahu Bulat Viral"],
-        answer: "Tahu Bulat",
-        explanation: "Lagu 'Tahu Bulat' anu dinyanyikeun ku Dani Firmansyah ngajadikeun tahu bulat jadi populer di masarakat."
-    },
-    {
-        question: "Kumaha ciri has sora panggero padagang tahu bulat?",
-        options: ["Nyaring", "Lembut", "Khas ngagorowok", "Nyanyi-nyanyi"],
-        answer: "Khas ngagorowok",
-        explanation: "Padagang tahu bulat kaceluk ku sora panggerona anu khas ngagorowok ngagambarkeun daganganna."
+        options: ["Asep", "Saep Bani", "Kang Asep", "Ente Sutisna"],
+        answer: "Saep Bani",
+        explanation: "Saep Bani mangrupikeun tokoh anu ngawanohkeun tahu bulat ka masarakat luas ngaliwatan lagu viralna."
     },
     {
         question: "Dina taun sabaraha lagu Tahu Bulat viral?",
@@ -43,34 +19,10 @@ const questions = [
         explanation: "Lagu Tahu Bulat viral dina taun 2015 sarta ngajadikeun jajanan ieu langkung populer deui."
     },
     {
-        question: "Naon ngaran kaulinan mobile anu ngangkat tema tahu bulat?",
-        options: ["Tahu Bulat Mania", "Tahu Bulatku", "Tahu Bulat Viral", "Tahu Bulat: The Game"],
-        answer: "Tahu Bulat Mania",
-        explanation: "Kaulinan mobile 'Tahu Bulat Mania' mangrupikeun kaulinan anu ngangkat tema jualan tahu bulat."
-    },
-    {
         question: "Sabaraha harga standar tahu bulat per bijina?",
         options: ["Rp 500", "Rp 1.000", "Rp 2.000", "Rp 5.000"],
         answer: "Rp 500",
         explanation: "Harga standar tahu bulat biasana dijual dina harga Rp 500 per biji, tapi bisa béda-béda gumantung kana lokasi."
-    },
-    {
-        question: "Kumaha cara ngajaga kerenyahan tahu bulat?",
-        options: ["Disimpen dina wadah kedap udara", "Dikukus deui", "Digoreng deui", "Dilempeukkeun"],
-        answer: "Digoreng deui",
-        explanation: "Pikeun ngajaga kerenyahan, tahu bulat bisa digoreng deui sakedap sateuacan didahar."
-    },
-    {
-        question: "Salah sahiji alesan kunaon tahu bulat loba nu resep nyaéta...",
-        options: ["Mahal jeung eksklusif", "Gampang kapanggih jeung murah hargana", "Leuwih kuat tina tahu biasa", "Dijieun tina daging soy"],
-        answer: "Gampang kapanggih jeung murah hargana",
-        explanation: "Tahu bulat populer sabab gampang kapanggih di pinggir jalan sarta hargana anu tepat pikeun sagala kalangan."
-    },
-    {
-        question: "Tahu bulat ogé bisa disebut bagian tina inovasi kuliner Sunda sabab...",
-        options: ["Ngagunakeun bahan impor", "Digoreng tanpa minyak", "Ngahasilkeun bentuk anyar tina olahan tahu", "Dijual ngan di toko élit"],
-        answer: "Ngahasilkeun bentuk anyar tina olahan tahu",
-        explanation: "Tahu bulat mangrupa inovasi tina olahan tahu tradisional anu ngahasilkeun produk anyar kalayan cita rasa jeung tekstur anu unik."
     },
     {
         question: "Tahu bulat munggaran dikenal ti daérah mana?",
@@ -78,60 +30,6 @@ const questions = [
         answer: "Tasikmalaya",
         explanation: "Tahu bulat mimitina populer ti daérah Tasikmalaya, Jawa Barat, sateuacan sumebar ka sakuliah Indonésia."
     },
-    {
-        question: "Naon ciri has utama tahu bulat dibandingkeun tahu biasa?",
-        options: ["Rasana pedes", "Bentukna pipih jeung padet", "Digoreng kalayan saos husus", "Bentukna buleud sarta ngembang nalika digoreng"],
-        answer: "Bentukna buleud sarta ngembang nalika digoreng",
-        explanation: "Tahu bulat boga ciri has bentukna anu buleud sarta bakal ngembang nalika digoreng, ngahasilkeun tekstur anu garing di luar tapi empuk di jero."
-    },
-    {
-        question: "Naon strategi penjualan anu ngajadikeun tahu bulat populer?",
-        options: ["Dijual di réstoran gancang saji", "Dijual ngangkut ojek online", "Dijual nguriling kalayan mobil bak kabuka sarta sora panggero anu unik", "Dijual dina bungkus instan"],
-        answer: "Dijual nguriling kalayan mobil bak kabuka sarta sora panggero anu unik",
-        explanation: "Strategi penjualan nganggo mobil bak kabuka sarta sora panggero anu unik ngajadikeun tahu bulat gampang dipikanyaho sarta ditéang ku masarakat."
-    },
-    {
-        question: "Sora rekaman anu mindeng diputer ku padagang tahu bulat nyaéta...",
-        options: ["'Tahu bulat! Lezat dan pedas!'", "'Tahu bulat! Goreng hangat, enak nendang!'", "'Tahu bulat! Digoreng dadakan, lima ratusan, gurih-gurih nyoi!'", "'Tahu bulat! Ngan dinten ieu, diskon spesial!'"],
-        answer: "'Tahu bulat! Digoreng dadakan, lima ratusan, gurih-gurih nyoi!'",
-        explanation: "Rekaman sora anu khas ieu mindeng diputer ku padagang tahu bulat pikeun narik perhatian para pembeli."
-    },
-    {
-        question: "Naon bahan dasar utama dina nyieun tahu bulat?",
-        options: ["Tepung béas", "Kedelé", "Hui", "Tepung kanji"],
-        answer: "Kedelé",
-        explanation: "Sapertos tahu biasa, bahan dasar utama tahu bulat nyaéta kedelé anu diolah jadi tahu teras diolah deui janten tahu bulat."
-    },
-    {
-        question: "Tekstur tahu bulat anu digoréng leres biasana...",
-        options: ["Lembek di luar, teuas di jero", "Garing di luar, lembut di jero", "Garing di luar jeung di jero", "Lembek di luar jeung di jero"],
-        answer: "Garing di luar, lembut di jero",
-        explanation: "Tahu bulat anu sampurna biasana boga tekstur garing di luar tapi tetep lembut sarta empuk di jero."
-    },
-    {
-        question: "Ngaran kaulinan Android anu ngajadikeun tahu bulat langkung populer nyaéta...",
-        options: ["Tahu Goreng Mania", "Tahu Bulat", "Jualan Tahu", "Tahu Express"],
-        answer: "Tahu Bulat",
-        explanation: "Kaulinan 'Tahu Bulat' ngajadikeun jajanan ieu langkung populer deui di kalangan generasi muda."
-    },
-    {
-        question: "Saha pamekar kaulinan 'Tahu Bulat' anu viral di Indonésia?",
-        options: ["Gojek Games", "Garuda Games", "Own Games", "Tofu Studio"],
-        answer: "Own Games",
-        explanation: "Kaulinan 'Tahu Bulat' dikembangkeun ku Own Games sarta suksés narik minat loba pamaén di Indonésia."
-    },
-    {
-        question: "Tahu bulat biasana ditaburan ku bumbu di handap ieu, iwal...",
-        options: ["Balado", "Kéju", "BBQ", "Sambel héjo seger"],
-        answer: "Sambel héjo seger",
-        explanation: "Tahu bulat biasana dibarengan ku bumbu kawas balado, kéju, atawa BBQ, tapi henteu biasa dibarengan sambel héjo seger."
-    },
-    {
-        question: "Naha tahu bulat disebut 'digoréng dadakan'?",
-        options: ["Karana digoréng sateuacan dijual", "Karana digoréng di bumi engké dibawa", "Karana ngan dijual peuting", "Karana henteu kudu digoréng pikeun didahar"],
-        answer: "Karana digoréng sateuacan dijual",
-        explanation: "Istilah 'digoréng dadakan' nunjukkeun yén tahu bulat digoréng langsung di tempat dagang pikeun ngajaga kerenyahan sarta kasegeranana nalika didahar."
-    }
 ];
 
 // Shuffle array function

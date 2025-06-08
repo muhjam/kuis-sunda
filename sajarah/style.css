@@ -437,14 +437,17 @@ nav.scrolled {
 #sejarah .content-text {
     flex: 1;
     padding: 0 2rem;
-    text-align: left;
+    text-align: justify;
 }
 
-.content-text p {
+#sejarah .content-text p {
     margin-bottom: 2rem;
     color: var(--text);
     font-size: 1.9rem;
     line-height: 1.7;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
 }
 
 /* ====================================
