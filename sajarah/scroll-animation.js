@@ -7,10 +7,10 @@ const navToggle = document.querySelector('.nav-toggle');
 function toggleMenu() {
     navLinks.classList.toggle('active');
     navToggle.classList.toggle('active');
-    
+
     // Toggle body scroll
     document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-    
+
     // Toggle icon between bars and times
     const icon = navToggle.querySelector('i');
     if (navLinks.classList.contains('active')) {
@@ -27,7 +27,7 @@ function closeMenu() {
     navLinks.classList.remove('active');
     navToggle.classList.remove('active');
     document.body.style.overflow = '';
-    
+
     const icon = navToggle.querySelector('i');
     icon.classList.remove('fa-times');
     icon.classList.add('fa-bars');
@@ -48,7 +48,7 @@ window.addEventListener('click', (e) => {
 });
 
 // Navbar scroll effect
-window.onscroll = function() {
+window.onscroll = function () {
     const nav = document.querySelector('nav');
     if (window.scrollY > 50) {
         nav.classList.add('scrolled-nav');
@@ -56,6 +56,19 @@ window.onscroll = function() {
         nav.classList.remove('scrolled-nav');
     }
 };
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('nav');
+    function onScroll() {
+        if (window.scrollY > 10) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+});
 
 // Initialize on load
 if (window.scrollY > 50) {
@@ -65,18 +78,18 @@ if (window.scrollY > 50) {
 // Active section highlight
 function setActiveSection() {
     const scrollPosition = window.scrollY + 150;
-    
+
     document.querySelectorAll('section').forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
-        
+
         if (sectionId && scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             // Remove active class from all nav links
             document.querySelectorAll('nav a').forEach(link => {
                 link.classList.remove('active');
             });
-            
+
             // Add active class to current section's nav link
             const activeLink = document.querySelector(`nav a[href*="${sectionId}"]`);
             if (activeLink) {
@@ -117,33 +130,33 @@ document.querySelectorAll('section').forEach(section => {
 
 // Smooth scroll for navigation links
 document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
-        
+
         // Only handle internal links
         if (!href.startsWith('#')) return;
-        
+
         e.preventDefault();
-        
+
         // If home link, scroll to top
         if (href === '#' || href === '#home') {
             window.scrollTo({ top: 0, behavior: 'smooth' });
             return;
         }
-        
+
         // For section links
         const targetSection = document.querySelector(href);
         if (targetSection) {
             const offset = 100; // Same as in setActiveSection
             const targetPosition = targetSection.offsetTop - offset;
-            
+
             // Update URL
             history.pushState(null, '', href);
-            
+
             // Update active class
             document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
             this.classList.add('active');
-            
+
             // Scroll to section
             window.scrollTo({
                 top: targetPosition,
