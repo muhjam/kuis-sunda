@@ -1,11 +1,11 @@
 let isChatbotOpen = false;
 
 // Floating arrow functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const heroSection = document.querySelector('.hero');
     const floatingArrow = document.getElementById('floatingArrow');
     const chatbotToggle = document.querySelector('.chatbot-toggle');
-    
+
     // Show/hide arrow on scroll
     function handleScroll() {
         const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
@@ -15,18 +15,18 @@ document.addEventListener('DOMContentLoaded', function() {
             floatingArrow.classList.remove('visible');
         }
     }
-    
+
     // Toggle chatbot when arrow is clicked
-    floatingArrow.addEventListener('click', function() {
+    floatingArrow.addEventListener('click', function () {
         toggleChatbot();
         this.classList.remove('visible');
     });
-    
+
     // Hide arrow when chatbot is opened via toggle
-    chatbotToggle.addEventListener('click', function() {
+    chatbotToggle.addEventListener('click', function () {
         floatingArrow.classList.remove('visible');
     });
-    
+
     window.addEventListener('scroll', handleScroll);
     // Initial check in case page loads with scroll position past hero
     handleScroll();
@@ -36,7 +36,7 @@ function toggleChatbot() {
     const chatbotWindow = document.getElementById('chatbotWindow');
     const floatingArrow = document.getElementById('floatingArrow');
     isChatbotOpen = !isChatbotOpen;
-    
+
     if (isChatbotOpen) {
         // Hide the floating arrow when opening the chat
         floatingArrow.classList.remove('visible');
@@ -114,7 +114,7 @@ async function simulateGeminiResponse(message) {
         if (lower.includes('asal') && (lower.includes('kota') || lower.includes('daerah') || lower.includes('tempat'))) {
             return "🥟 Tahu bulat asalna ti Kota Tasikmalaya, Jawa Barat! Salahsiji jajanan khas Sunda anu jadi ikon kuliner di dinya. <br><em>(Tahu bulat berasal dari Kota Tasikmalaya, Jawa Barat! Salah satu jajanan khas Sunda yang menjadi ikon kuliner di sana.)</em>";
         }
-        
+
         const responses = [
             "🥟 Tahu bulat téh digoreng dadakan! Buleud, gurih, ngeunah pisan!<br><em>(Tahu bulat digoreng dadakan! Bulat, gurih, sangat enak!)</em>",
             "Tahu bulat mangrupa cemilan favorit barudak Sunda! Biasana dijual di mobil pick-up.<br><em>(Tahu bulat adalah camilan favorit anak-anak Sunda! Biasanya dijual di mobil bak terbuka.)</em>",
