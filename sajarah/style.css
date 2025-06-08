@@ -780,10 +780,11 @@ nav.scrolled {
     10. FILOSOFI SECTION
     ==================================== */
 #filosofi {
-      width: 100%;
-      background: linear-gradient(135deg, #fff8e1 0%, #f3e5ab 100%);
-      position: relative;
-      overflow: hidden;
+    width: 100%;
+    /* Ganti background menjadi sama seperti #sejarah */
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 0; /* Kurangi dari 8rem menjadi 6rem */
 }
 
 #filosofi::before {
@@ -803,6 +804,11 @@ nav.scrolled {
      z-index: 1;
 }
 
+#filosofi .section-header {
+     text-align: center;
+     margin-bottom: 3rem; /* Kurangi dari 5rem menjadi 3rem */
+}
+
 #filosofi .section-header h2 {
      color: var(--primary-dark);
      font-size: 4rem;
@@ -819,7 +825,7 @@ nav.scrolled {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
      gap: 4rem;
-     margin-top: 6rem;
+     margin-top: 2rem; /* Kurangi dari 3rem menjadi 2rem */
      padding: 0 2rem;
 }
 
@@ -829,7 +835,7 @@ nav.scrolled {
           grid-template-columns: 1fr;
           gap: 3rem;
           max-width: 500px;
-          margin: 6rem auto 0;
+          margin: 2rem auto 0; /* Kurangi dari 3rem menjadi 2rem */
      }
 }
 
@@ -962,8 +968,12 @@ nav.scrolled {
 
 /* ---------- Filosofi Responsive ---------- */
 @media (max-width: 992px) {
+     #filosofi {
+          padding: 4rem 0; /* Kurangi dari 6rem menjadi 4rem */
+     }
+     
      #filosofi .section-header {
-          margin-bottom: 4rem;
+          margin-bottom: 2.5rem; /* Kurangi dari 4rem menjadi 2.5rem */
      }
      
      #filosofi .section-header h2 {
@@ -974,7 +984,7 @@ nav.scrolled {
      .philosophy-grid {
           grid-template-columns: 1fr;
           gap: 3rem;
-          margin-top: 4rem;
+          margin-top: 1.5rem; /* Kurangi dari 2rem menjadi 1.5rem */
           padding: 0 1rem;
      }
      
@@ -1002,6 +1012,14 @@ nav.scrolled {
 }
 
 @media (max-width: 767px) {
+     #filosofi {
+          padding: 5rem 0; /* Padding lebih kecil untuk mobile */
+     }
+     
+     #filosofi .section-header {
+          margin-bottom: 3rem; /* Kurangi margin bottom untuk mobile */
+     }
+     
      #filosofi .section-header h2 {
           font-size: 2.5rem;
      }
@@ -1009,7 +1027,7 @@ nav.scrolled {
      .philosophy-grid {
           grid-template-columns: 1fr;
           gap: 2.5rem;
-          margin-top: 3rem;
+          margin-top: 1.5rem; /* Margin top lebih kecil untuk mobile */
           padding: 0 0.5rem;
      }
      
@@ -1038,8 +1056,20 @@ nav.scrolled {
 }
 
 @media (max-width: 480px) {
+     #filosofi {
+          padding: 4rem 0; /* Padding paling kecil untuk mobile kecil */
+     }
+     
+     #filosofi .section-header {
+          margin-bottom: 2.5rem; /* Margin bottom paling kecil */
+     }
+     
      #filosofi .section-header h2 {
           font-size: 2.5rem;
+     }
+     
+     .philosophy-grid {
+          margin-top: 1rem; /* Margin top minimal untuk mobile kecil */
      }
      
      .philosophy-item {
@@ -1098,592 +1128,689 @@ nav.scrolled {
 /* ====================================
     12. RESEP SECTION
     ==================================== */
-.recipe-section {
-     background: linear-gradient(135deg, #fff8e1 0%, #f3e5ab 50%, #ede0a3 100%);
-     padding: 8rem 0;
-     position: relative;
-     overflow: hidden;
+#resep {
+    width: 100%;
+    margin: 0 auto;
+    padding: 8rem 0;
+    position: relative;
+    background: linear-gradient(135deg, rgba(62, 39, 35, 0.95), rgba(93, 64, 55, 0.9)), 
+                url('../src/bg-batik.jpg') center/cover no-repeat fixed;
+    background-attachment: fixed;
+    overflow: hidden;
 }
 
-.recipe-section::before {
-     content: '';
-     position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="15" cy="25" r="2" fill="%23FFB74D" opacity="0.1"/><circle cx="85" cy="75" r="1.5" fill="%235D4037" opacity="0.08"/><path d="M40 10 Q45 15 40 20 Q35 15 40 10" fill="%23D7BBA8" opacity="0.06"/><circle cx="70" cy="30" r="2.5" fill="%23FFB74D" opacity="0.05"/></svg>') repeat;
-     pointer-events: none;
-     z-index: 0;
-     animation: floatPattern 25s ease-in-out infinite;
+#resep::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="15" cy="25" r="2" fill="%23FFB74D" opacity="0.1"/><circle cx="85" cy="75" r="1.5" fill="%235D4037" opacity="0.08"/><path d="M40 10 Q45 15 40 20 Q35 15 40 10" fill="%23D7BBA8" opacity="0.06"/><circle cx="70" cy="30" r="2.5" fill="%23FFB74D" opacity="0.05"/></svg>') repeat;
+    pointer-events: none;
+    z-index: 1;
+    animation: floatPattern 25s ease-in-out infinite;
 }
 
-.recipe-section .container {
-     position: relative;
-     z-index: 1;
+#resep .container {
+    position: relative;
+    z-index: 2;
+}
+
+#resep,
+#resep h2,
+#resep h3,
+#resep p,
+#resep .section-header .divider {
+    color: #ffffff;
+}
+
+#resep .section-header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+#resep .section-header .divider {
+    background: var(--accent);
+    box-shadow: 0 2px 10px rgba(255, 183, 77, 0.3);
+}
+
+#resep .section-header h2 {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff !important;
 }
 
 .recipe-container {
-     background: linear-gradient(145deg, #ffffff 0%, #fefdf9 50%, #fcfaf4 100%);
-     border-radius: 25px;
-     padding: 5rem 4rem;
-     box-shadow: 
-          0 25px 50px rgba(93, 64, 55, 0.1),
-          0 10px 20px rgba(0, 0, 0, 0.05),
-          inset 0 1px 0 rgba(255, 255, 255, 0.9);
-     margin-top: 4rem;
-     position: relative;
-     overflow: hidden;
-     border: 3px solid rgba(255, 183, 77, 0.1);
-     transition: all 0.4s ease;
-     width: 800px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 240, 0.95) 100%);
+    border-radius: 25px;
+    padding: 5rem 4rem;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.3),
+        0 10px 20px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid rgba(255, 183, 77, 0.3);
+    transition: all 0.4s ease;
+    max-width: 1000px;
+    backdrop-filter: blur(15px);
 }
 
 .recipe-container::before {
-     content: '';
-     position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     height: 6px;
-     background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 50%, var(--accent) 100%);
-     border-radius: 25px 25px 0 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 50%, var(--accent) 100%);
+    border-radius: 25px 25px 0 0;
 }
 
 .recipe-container::after {
-     content: '👨‍🍳';
-     position: absolute;
-     top: 30px;
-     right: 30px;
-     font-size: 4rem;
-     opacity: 0.1;
-     z-index: 0;
-     animation: floatRecipe 4s ease-in-out infinite;
+    content: '👨‍🍳';
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 4rem;
+    opacity: 0.1;
+    z-index: 0;
+    animation: floatRecipe 4s ease-in-out infinite;
 }
 
 .recipe-container:hover {
-     transform: translateY(-5px);
-     box-shadow: 
-          0 35px 70px rgba(93, 64, 55, 0.15),
-          0 15px 30px rgba(0, 0, 0, 0.08),
-          inset 0 1px 0 rgba(255, 255, 255, 0.95);
-     border-color: rgba(255, 183, 77, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 
+        0 35px 70px rgba(0, 0, 0, 0.4),
+        0 15px 30px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    border-color: var(--accent);
 }
 
 .recipe-intro {
-     text-align: center;
-     margin-bottom: 5rem;
-     position: relative;
-     z-index: 1;
+    text-align: center;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .recipe-intro h3 {
-     font-size: 3.2rem;
-     color: var(--primary-dark);
-     margin-bottom: 2rem;
-     font-weight: 800;
-     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--accent) 100%);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-     background-clip: text;
-     position: relative;
+    font-size: 3.2rem;
+    color: var(--primary-dark) !important;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
 }
 
 .recipe-intro h3::after {
-     content: '';
-     position: absolute;
-     bottom: -10px;
-     left: 50%;
-     transform: translateX(-50%);
-     width: 80px;
-     height: 4px;
-     background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
-     border-radius: 2px;
-     box-shadow: 0 2px 8px rgba(255, 183, 77, 0.3);
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(255, 183, 77, 0.3);
 }
 
 .recipe-intro p {
-     font-size: 1.8rem;
-     color: var(--text-light);
-     max-width: 600px;
-     margin: 0 auto;
-     line-height: 1.7;
-     font-style: italic;
+    font-size: 1.8rem;
+    color: var(--text) !important;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-style: italic;
 }
 
-/* Recipe Content Grid */
 .recipe-content {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     gap: 5rem;
-     margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 4rem;
 }
 
 .ingredients, .steps {
-     background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(250, 248, 240, 0.9) 100%);
-     border-radius: 20px;
-     padding: 4rem 3rem;
-     box-shadow: 
-          0 15px 30px rgba(93, 64, 55, 0.08),
-          0 5px 15px rgba(0, 0, 0, 0.03);
-     border: 2px solid rgba(255, 183, 77, 0.1);
-     position: relative;
-     overflow: hidden;
-     transition: all 0.4s ease;
-     margin-bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(250, 248, 240, 0.95) 100%);
+    border-radius: 20px;
+    padding: 4rem 3rem;
+    box-shadow: 
+        0 15px 30px rgba(93, 64, 55, 0.15),
+        0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 183, 77, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
 }
 
 .ingredients::before,
 .steps::before {
-     content: '';
-     position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     height: 4px;
-     background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
-     border-radius: 20px 20px 0 0;
-     transform: scaleX(0);
-     transition: transform 0.4s ease;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
+    border-radius: 20px 20px 0 0;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
 }
 
 .ingredients:hover::before,
 .steps:hover::before {
-     transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .ingredients:hover,
 .steps:hover {
-     transform: translateY(-3px);
-     box-shadow: 
-          0 20px 40px rgba(93, 64, 55, 0.12),
-          0 8px 20px rgba(0, 0, 0, 0.05);
-     border-color: rgba(255, 183, 77, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 
+        0 20px 40px rgba(93, 64, 55, 0.2),
+        0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent);
 }
 
 .ingredients h3, .steps h3 {
-     color: var(--primary-dark);
-     margin-bottom: 3rem;
-     font-size: 2.6rem;
-     font-weight: 700;
-     display: flex;
-     align-items: center;
-     gap: 1.5rem;
-     position: relative;
+    color: var(--primary-dark) !important;
+    margin-bottom: 3rem;
+    font-size: 2.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
 }
 
 .ingredients h3::before {
-     content: '🥬';
-     font-size: 3rem;
-     background: linear-gradient(135deg, rgba(255, 183, 77, 0.2) 0%, rgba(93, 64, 55, 0.1) 100%);
-     border-radius: 50%;
-     width: 60px;
-     height: 60px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     border: 2px solid rgba(255, 183, 77, 0.3);
-     animation: pulseRecipe 3s ease-in-out infinite;
+    content: '🥬';
+    font-size: 3rem;
+    background: linear-gradient(135deg, rgba(255, 183, 77, 0.2) 0%, rgba(93, 64, 55, 0.1) 100%);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 183, 77, 0.3);
+    animation: pulseRecipe 3s ease-in-out infinite;
 }
 
 .steps h3::before {
-     content: '📝';
-     font-size: 3rem;
-     background: linear-gradient(135deg, rgba(255, 183, 77, 0.2) 0%, rgba(93, 64, 55, 0.1) 100%);
-     border-radius: 50%;
-     width: 60px;
-     height: 60px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     border: 2px solid rgba(255, 183, 77, 0.3);
-     animation: pulseRecipe 3s ease-in-out infinite;
-     animation-delay: 1.5s;
+    content: '📝';
+    font-size: 3rem;
+    background: linear-gradient(135deg, rgba(255, 183, 77, 0.2) 0%, rgba(93, 64, 55, 0.1) 100%);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 183, 77, 0.3);
+    animation: pulseRecipe 3s ease-in-out infinite;
+    animation-delay: 1.5s;
 }
 
 .ingredients ul, .steps ol {
-     padding-left: 0;
-     font-size: 1.8rem;
-     line-height: 1.8;
-     list-style: none;
-     counter-reset: step-counter;
+    padding-left: 0;
+    font-size: 1.7rem;
+    line-height: 1.8;
+    list-style: none;
+    counter-reset: step-counter;
 }
 
 .ingredients li, .steps li {
-     margin-bottom: 2rem;
-     padding: 1.5rem 2rem;
-     background: rgba(255, 255, 255, 0.6);
-     border-radius: 12px;
-     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-     border-left: 4px solid var(--accent);
-     position: relative;
-     transition: all 0.3s ease;
-     color: var(--text);
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--accent);
+    position: relative;
+    transition: all 0.3s ease;
+    color: var(--text) !important;
 }
 
 .ingredients li::before {
-     content: '✓';
-     position: absolute;
-     left: -8px;
-     top: 50%;
-     transform: translateY(-50%);
-     width: 24px;
-     height: 24px;
-     background: var(--accent);
-     color: white;
-     border-radius: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     font-size: 1.2rem;
-     font-weight: bold;
-     box-shadow: 0 2px 5px rgba(255, 183, 77, 0.3);
+    content: '✓';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(255, 183, 77, 0.3);
 }
 
 .steps li {
-     counter-increment: step-counter;
-     border-left-color: var(--primary);
+    counter-increment: step-counter;
+    border-left-color: var(--primary);
 }
 
 .steps li::before {
-     content: counter(step-counter);
-     position: absolute;
-     left: -12px;
-     top: 50%;
-     transform: translateY(-50%);
-     width: 28px;
-     height: 28px;
-     background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-     color: white;
-     border-radius: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     font-size: 1.4rem;
-     font-weight: bold;
-     box-shadow: 0 3px 8px rgba(93, 64, 55, 0.3);
-     border: 2px solid white;
+    content: counter(step-counter);
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(93, 64, 55, 0.3);
+    border: 2px solid white;
 }
 
 .ingredients li:hover,
 .steps li:hover {
-     transform: translateX(5px);
-     background: rgba(255, 255, 255, 0.9);
-     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Recipe Tips Section */
 .recipe-tips {
-     margin-top: 4rem;
-     padding: 3rem;
-     background: linear-gradient(135deg, rgba(255, 183, 77, 0.1) 0%, rgba(93, 64, 55, 0.05) 100%);
-     border-radius: 20px;
-     border: 2px solid rgba(255, 183, 77, 0.2);
-     position: relative;
-     overflow: hidden;
+    grid-column: 1 / -1;
+    margin-top: 4rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, rgba(255, 183, 77, 0.15) 0%, rgba(93, 64, 55, 0.08) 100%);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 183, 77, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
 .recipe-tips::before {
-     content: '💡';
-     position: absolute;
-     top: 20px;
-     right: 20px;
-     font-size: 3rem;
-     opacity: 0.3;
-     animation: floatRecipe 3s ease-in-out infinite;
+    content: '💡';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    opacity: 0.3;
+    animation: floatRecipe 3s ease-in-out infinite;
 }
 
 .recipe-tips h4 {
-     color: var(--primary-dark);
-     font-size: 2.2rem;
-     margin-bottom: 2rem;
-     display: flex;
-     align-items: center;
-     gap: 1rem;
+    color: var(--primary-dark) !important;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .recipe-tips h4::before {
-     content: '👨‍🍳';
-     font-size: 2.5rem;
+    content: '👨‍🍳';
+    font-size: 2.5rem;
 }
 
 .recipe-tips p {
-     font-size: 1.6rem;
-     color: var(--text);
-     line-height: 1.7;
-     margin-bottom: 1rem;
-     font-style: italic;
+    font-size: 1.6rem;
+    color: var(--text) !important;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-style: italic;
 }
 
 /* Enhanced Recipe Animations */
 @keyframes floatRecipe {
-     0%, 100% { transform: translateY(0px); }
-     50% { transform: translateY(-10px); }
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
 }
 
 @keyframes floatPattern {
-     0%, 100% { transform: translateY(0px) rotate(0deg); }
-     50% { transform: translateY(-8px) rotate(3deg); }
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(3deg); }
 }
 
 @keyframes pulseRecipe {
-     0%, 100% { transform: scale(1); }
-     50% { transform: scale(1.05); }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
-/* =========================
-    Responsive Recipe Section
-    ========================= */
-
-/* Tablet (max-width: 991px) */
-@media (max-width: 991px) {
-    #resep .section-header h2 {
-          font-size: 3.5rem;
+/* Responsive Recipe Section */
+@media (max-width: 1199px) {
+    .recipe-container {
+        max-width: 900px;
+        padding: 4rem 3rem;
     }
-     .recipe-section {
-          padding: 6rem 0;
-     }
-     .recipe-container {
-          padding: 3.5rem 2.5rem;
-          border-radius: 18px;
-          margin-top: 2.5rem;
-          width: 700px;
-     }
-     .recipe-container::after {
-          font-size: 3rem;
-          top: 20px;
-          right: 20px;
-     }
-     .recipe-intro {
-          margin-bottom: 3.5rem;
-     }
-     .recipe-intro h3 {
-          font-size: 2.4rem;
-          margin-bottom: 1.5rem;
-     }
-     .recipe-intro h3::after {
-          width: 60px;
-          height: 3px;
-          bottom: -8px;
-     }
-     .recipe-intro p {
-          font-size: 1.6rem;
-          line-height: 1.6;
-     }
-     .recipe-content {
-          grid-template-columns: 1fr;
-          gap: 3rem;
-          margin-top: 2.5rem;
-     }
-     .ingredients, .steps {
-          padding: 2.5rem 1.5rem;
-          border-radius: 15px;
-          margin-bottom: 0;
-     }
-     .ingredients h3, .steps h3 {
-          font-size: 2rem;
-          margin-bottom: 2rem;
-          gap: 1rem;
-     }
-     .ingredients h3::before,
-     .steps h3::before {
-          width: 45px;
-          height: 45px;
-          font-size: 2rem;
-     }
-     .ingredients ul, .steps ol {
-          font-size: 1.6rem;
-          line-height: 1.6;
-     }
-     .ingredients li, .steps li {
-          font-size: 1.5rem;
-          padding: 1.2rem 3rem;
-          margin-bottom: 1.2rem;
-          border-radius: 10px;
-     }
-     .ingredients li::before {
-          width: 20px;
-          height: 20px;
-          font-size: 1rem;
-          left: -6px;
-     }
-     .steps li::before {
-          width: 24px;
-          height: 24px;
-          font-size: 1.2rem;
-          left: -10px;
-     }
-     .recipe-tips {
-          margin-top: 2.5rem;
-          padding: 2rem 1.5rem;
-          border-radius: 15px;
-     }
-     .recipe-tips::before {
-          font-size: 2.2rem;
-          top: 12px;
-          right: 12px;
-     }
-     .recipe-tips h4 {
-          font-size: 1.7rem;
-          margin-bottom: 1.2rem;
-     }
-     .recipe-tips h4::before {
-          font-size: 1.8rem;
-     }
-     .recipe-tips p {
-          font-size: 1.3rem;
-          line-height: 1.5;
-          margin-bottom: 0.8rem;
-     }
-}
-
-/* Mobile (max-width: 767px) */
-@media (max-width: 767px) {
-    #resep .section-header h2 {
-          font-size: 2.5rem;
-        color: var(--primary-dark);
-    }
-     .recipe-section {
-          padding: 4rem 0;
-     }
-     .recipe-container {
-          padding: 2rem 1rem;
-          border-radius: 12px;
-          margin-top: 1.5rem;
-          width: 400px;
-     }
-     .recipe-container::after {
-          font-size: 2.2rem;
-          top: 10px;
-          right: 10px;
-     }
-     .recipe-intro {
-          margin-bottom: 2rem;
-     }
-     .recipe-intro h3 {
-          font-size: 1.8rem;
-          margin-bottom: 1rem;
-     }
-     .recipe-intro h3::after {
-          width: 40px;
-          height: 2px;
-          bottom: -5px;
-     }
-     .recipe-intro p {
-          font-size: 1.2rem;
-          line-height: 1.4;
-     }
-     .recipe-content {
-          grid-template-columns: 1fr;
-          gap: 1.5rem;
-          margin-top: 1.2rem;
-     }
-     .ingredients, .steps {
-          padding: 1.2rem 0.8rem;
-          border-radius: 8px;
-     }
-     .ingredients h3, .steps h3 {
-          font-size: 1.3rem;
-          margin-bottom: 1rem;
-          gap: 0.5rem;
-     }
-     .ingredients h3::before,
-     .steps h3::before {
-          width: 28px;
-          height: 28px;
-          font-size: 1.2rem;
-     }
-     .ingredients ul, .steps ol {
-          font-size: 1.1rem;
-          line-height: 1.3;
-     }
-     .ingredients li, .steps li {
-          font-size: 1.1rem;
-          padding: 0.7rem 0.7rem;
-          margin-bottom: 0.7rem;
-          border-radius: 6px;
-     }
-     .ingredients li::before {
-          width: 14px;
-          height: 14px;
-          font-size: 0.8rem;
-          left: -4px;
-     }
-     .steps li::before {
-          width: 16px;
-          height: 16px;
-          font-size: 0.9rem;
-          left: -6px;
-     }
-     .recipe-tips {
-          margin-top: 1.2rem;
-          padding: 1rem 0.7rem;
-          border-radius: 8px;
-     }
-     .recipe-tips::before {
-          font-size: 1.2rem;
-          top: 6px;
-          right: 6px;
-     }
-     .recipe-tips h4 {
-          font-size: 1.1rem;
-          margin-bottom: 0.7rem;
-     }
-     .recipe-tips h4::before {
-          font-size: 1.2rem;
-     }
-     .recipe-tips p {
-          font-size: 1rem;
-          line-height: 1.2;
-          margin-bottom: 0.5rem;
-     }
-}
-
-@media (max-width: 424px) {
-     .recipe-container {
-          width: 100%;
-          padding: 1.5rem;
-     }
-     .recipe-intro h3 {
-          font-size: 1.6rem;
-     }
-     .recipe-intro p {
-          font-size: 1.1rem;
-     }
-     .ingredients, .steps {
-          padding: 1rem;
-     }
-     .ingredients h3, .steps h3 {
-          font-size: 1.4rem;
-     }
-     .ingredients ul, .steps ol {
-          font-size: 1rem;
-     }
     
+    .recipe-content {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 991px) {
+    #resep {
+        background-attachment: scroll;
+        padding: 6rem 0;
+    }
+    
+    #resep .section-header {
+        margin-bottom: 4rem;
+    }
+    
+    #resep .section-header h2 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .recipe-container {
+        max-width: 100%;
+        padding: 3.5rem 2.5rem;
+        border-radius: 18px;
+        margin: 0 1rem;
+    }
+    
+    .recipe-container::after {
+        font-size: 3rem;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .recipe-intro {
+        margin-bottom: 3.5rem;
+    }
+    
+    .recipe-intro h3 {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .recipe-intro h3::after {
+        width: 60px;
+        height: 3px;
+        bottom: -8px;
+    }
+    
+    .recipe-intro p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+    
+    .recipe-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+    
+    .ingredients, .steps {
+        padding: 3rem 2.5rem;
+        border-radius: 15px;
+    }
+    
+    .ingredients h3, .steps h3 {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+        gap: 1rem;
+    }
+    
+    .ingredients h3::before,
+    .steps h3::before {
+        width: 50px;
+        height: 50px;
+        font-size: 2.5rem;
+    }
+    
+    .ingredients ul, .steps ol {
+        font-size: 1.6rem;
+        line-height: 1.7;
+    }
+    
+    .ingredients li, .steps li {
+        font-size: 1.6rem;
+        padding: 1.3rem 2rem;
+        margin-bottom: 1.5rem;
+        border-radius: 10px;
+    }
+    
+    .recipe-tips {
+        margin-top: 3rem;
+        padding: 2.5rem 2rem;
+        border-radius: 15px;
+    }
+    
+    .recipe-tips h4 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .recipe-tips p {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    #resep {
+        padding: 5rem 0;
+    }
+    
+    #resep .section-header {
+        margin-bottom: 3rem;
+    }
+    
+    #resep .section-header h2 {
+        font-size: 3rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .recipe-container {
+        padding: 2.5rem 1.5rem;
+        border-radius: 15px;
+        margin: 0 0.5rem;
+    }
+    
+    .recipe-container::after {
+        font-size: 2.5rem;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .recipe-intro {
+        margin-bottom: 2.5rem;
+    }
+    
+    .recipe-intro h3 {
+        font-size: 2.2rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .recipe-intro h3::after {
+        width: 50px;
+        height: 3px;
+        bottom: -6px;
+    }
+    
+    .recipe-intro p {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+    
+    .recipe-content {
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .ingredients, .steps {
+        padding: 2rem 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .ingredients h3, .steps h3 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        gap: 0.8rem;
+    }
+    
+    .ingredients h3::before,
+    .steps h3::before {
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+    }
+    
+    .ingredients ul, .steps ol {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+    
+    .ingredients li, .steps li {
+        font-size: 1.4rem;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.2rem;
+        border-radius: 8px;
+    }
+    
+    .ingredients li::before {
+        width: 20px;
+        height: 20px;
+        font-size: 1rem;
+        left: -6px;
+    }
+    
+    .steps li::before {
+        width: 22px;
+        height: 22px;
+        font-size: 1.1rem;
+        left: -8px;
+    }
+    
+    .recipe-tips {
+        margin-top: 2rem;
+        padding: 2rem 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .recipe-tips::before {
+        font-size: 2.2rem;
+        top: 12px;
+        right: 12px;
+    }
+    
+    .recipe-tips h4 {
+        font-size: 1.7rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .recipe-tips h4::before {
+        font-size: 2rem;
+    }
+    
+    .recipe-tips p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #resep {
+        padding: 4rem 0;
+    }
+    
+    #resep .section-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .recipe-container {
+        padding: 2rem 1rem;
+        border-radius: 12px;
+        margin: 0 0.2rem;
+    }
+    
+    .recipe-container::after {
+        font-size: 2rem;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .recipe-intro h3 {
+        font-size: 2rem;
+    }
+    
+    .recipe-intro p {
+        font-size: 1.3rem;
+    }
+    
+    .ingredients, .steps {
+        padding: 1.5rem 1rem;
+    }
+    
+    .ingredients h3, .steps h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .ingredients h3::before,
+    .steps h3::before {
+        width: 35px;
+        height: 35px;
+        font-size: 1.8rem;
+    }
+    
+    .ingredients li, .steps li {
+        font-size: 1.3rem;
+        padding: 0.8rem 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .recipe-tips {
+        padding: 1.5rem 1rem;
+    }
+    
+    .recipe-tips h4 {
+        font-size: 1.5rem;
+    }
+    
+    .recipe-tips p {
+        font-size: 1.2rem;
+    }
 }
 
 /* ====================================
     13. TEAM SECTION
     ==================================== */
 #tim {
-      width: 100%;
-      background: linear-gradient(135deg, #fff8e1 0%, #f3e5ab 50%, #ede0a3 100%);
-      padding: 8rem 0;
-      position: relative;
-      overflow: hidden;
+    width: 100%;
+    /* Ubah background menjadi sama seperti #sejarah */
+    position: relative;
+    overflow: hidden;
+    padding: 8rem 0;
 }
 
 #tim::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23FFB74D" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="%235D4037" opacity="0.08"/><circle cx="50" cy="70" r="2.5" fill="%23D7BBA8" opacity="0.06"/><circle cx="30" cy="80" r="1.8" fill="%23FFB74D" opacity="0.05"/></svg>') repeat;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M30 5 L35 20 L50 20 L38 30 L42 45 L30 37 L18 45 L22 30 L10 20 L25 20 Z" fill="%23FFB74D" opacity="0.05"/><circle cx="70" cy="70" r="3" fill="%235D4037" opacity="0.08"/><circle cx="20" cy="80" r="2" fill="%23D7BBA8" opacity="0.1"/></svg>') repeat;
      pointer-events: none;
      z-index: 0;
-     animation: floatPattern 30s ease-in-out infinite;
 }
 
 #tim .container {
@@ -1715,7 +1842,7 @@ nav.scrolled {
      font-size: 1.9rem;
      line-height: 1.7;
      color: var(--text);
-     background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(250, 248, 240, 0.9) 100%);
+     background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 240, 0.95) 100%);
      padding: 3rem 4rem;
      border-radius: 20px;
      box-shadow: 0 8px 25px rgba(93, 64, 55, 0.1);
@@ -1743,7 +1870,7 @@ nav.scrolled {
 }
 
 .team-member {
-     background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
+     background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 240, 0.95) 100%);
      border-radius: 25px;
      padding: 4rem 3rem;
      text-align: center;
@@ -1907,149 +2034,149 @@ nav.scrolled {
 /* ---------- Team Responsive ---------- */
 @media (max-width: 991px) {
      .team-grid {
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 3rem;
-          padding: 0 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 3rem;
+        padding: 0 1rem;
      }
      
      .team-member {
-          padding: 3rem 2rem;
-          border-radius: 20px;
+        padding: 3rem 2rem;
+        border-radius: 20px;
      }
      
      .member-photo {
-          width: 100px;
-          height: 100px;
-          font-size: 4rem;
-          margin-bottom: 2.5rem;
+        width: 100px;
+        height: 100px;
+        font-size: 4rem;
+        margin-bottom: 2.5rem;
      }
      
      .team-member h3 {
-          font-size: 2.2rem;
-          margin-bottom: 1.2rem;
+        font-size: 2.2rem;
+        margin-bottom: 1.2rem;
      }
      
      .member-role {
-          font-size: 1.6rem;
-          margin-bottom: 1.8rem;
+        font-size: 1.6rem;
+        margin-bottom: 1.8rem;
      }
      
      .member-info {
-          font-size: 1.5rem;
+        font-size: 1.5rem;
      }
 
      .team-intro {
-          padding: 2.5rem 3rem;
-          margin-bottom: 4rem;
-          font-size: 1.7rem;
+        padding: 2.5rem 3rem;
+        margin-bottom: 4rem;
+        font-size: 1.7rem;
      }
 }
 
 @media (max-width: 767px) {
      .team-grid {
-          grid-template-columns: 1fr;
-          gap: 2.5rem;
-          margin-top: 4rem;
-          padding: 0 0.5rem;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        margin-top: 4rem;
+        padding: 0 0.5rem;
      }
      
      .team-member {
-          padding: 2.5rem 1.8rem;
-          width: 100%;
-          max-width: none;
-          margin: 0 auto;
-          border-radius: 18px;
-          box-sizing: border-box;
+        padding: 2.5rem 1.8rem;
+        width: 100%;
+        max-width: none;
+        margin: 0 auto;
+        border-radius: 18px;
+        box-sizing: border-box;
      }
      
      .member-photo {
-          width: 90px;
-          height: 90px;
-          font-size: 3.5rem;
-          margin-bottom: 2rem;
+        width: 90px;
+        height: 90px;
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
      }
      
      .team-member h3 {
-          font-size: 2rem;
-          margin-bottom: 1rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
      }
      
      .member-role {
-          font-size: 1.5rem;
-          margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
      }
      
      .member-info {
-          font-size: 1.4rem;
-          line-height: 1.5;
-          margin-bottom: 0.8rem;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
      }
 
      .team-intro {
-          padding: 2rem 2.5rem;
-          margin-bottom: 3rem;
-          font-size: 1.6rem;
-          border-radius: 15px;
+        padding: 2rem 2.5rem;
+        margin-bottom: 3rem;
+        font-size: 1.6rem;
+        border-radius: 15px;
      }
 
      .team-intro::before {
-          font-size: 2.5rem;
-          top: 15px;
-          right: 20px;
+        font-size: 2.5rem;
+        top: 15px;
+        right: 20px;
      }
 
      #tim .section-header h2 {
-          font-size: 3rem;
+        font-size: 3rem;
      }
 }
 
 /* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
      .team-member {
-          padding: 2rem 1.5rem;
-          width: 100%;
-          max-width: none;
-          border-radius: 15px;
-          box-sizing: border-box;
+        padding: 2rem 1.5rem;
+        width: 100%;
+        max-width: none;
+        border-radius: 15px;
+        box-sizing: border-box;
      }
      
      .member-photo {
-          width: 80px;
-          height: 80px;
-          font-size: 3rem;
-          margin-bottom: 1.8rem;
+        width: 80px;
+        height: 80px;
+        font-size: 3rem;
+        margin-bottom: 1.8rem;
      }
      
      .team-member h3 {
-          font-size: 1.8rem;
+        font-size: 1.8rem;
      }
      
      .member-role {
-          font-size: 1.4rem;
-          margin-bottom: 1.2rem;
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
      }
      
      .member-info {
-          font-size: 1.3rem;
-          line-height: 1.4;
-          margin-bottom: 0.6rem;
+        font-size: 1.3rem;
+        line-height: 1.4;
+        margin-bottom: 0.6rem;
      }
 
      .team-intro {
-          padding: 1.8rem 2rem;
-          margin-bottom: 2.5rem;
-          font-size: 1.5rem;
-          border-radius: 12px;
+        padding: 1.8rem 2rem;
+        margin-bottom: 2.5rem;
+        font-size: 1.5rem;
+        border-radius: 12px;
      }
 
      .team-intro::before {
-          font-size: 2.2rem;
-          top: 12px;
-          right: 15px;
+        font-size: 2.2rem;
+        top: 12px;
+        right: 15px;
      }
 
      #tim .section-header h2 {
-          font-size: 2.5rem;
+        font-size: 2.5rem;
      }
 }
 
@@ -3089,7 +3216,7 @@ footer {
 /* Responsive: jika perlu, tambahkan penyesuaian untuk mobile */
 @media (max-width: 767px) {
     .scroll-down {
-        bottom: 20px;
+        bottom: 40px;
         font-size: 1.6rem;
     }
     .scroll-down i {
