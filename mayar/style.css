@@ -872,23 +872,62 @@ body::before {
 }
 
 /* Options Styling */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
 .option {
     background: white;
     border: 2px solid var(--primary);
     border-radius: 8px;
-    padding: 15px;
-    margin: 10px 0;
+    padding: 20px 15px;
+    min-width: 120px;  /* Added minimum width */
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+    .options {
+        display: grid;
+        grid-template-areas: 
+            "option1 option2"
+            "option3 option3";
+        gap: 15px;
+    }
+    
+    .option:nth-child(1) {
+        grid-area: option1;
+    }
+    
+    .option:nth-child(2) {
+        grid-area: option2;
+    }
+    
+    .option:nth-child(3) {
+        grid-area: option3;
+        max-width: 80%;
+        min-width: 200px;  /* Wider minimum width for the bottom option */
+        margin: 0 auto;
+        padding: 15px 25px;  /* Adjusted padding for better proportions */
+    }
 }
 
 .option:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     border-color: var(--secondary);
+    z-index: 1;
 }
 
 .option::before {

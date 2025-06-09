@@ -2,31 +2,31 @@
 const questions = [
     {
         question: "Kumaha mimiti cara nyieun tahu bulat anu bener?",
-        options: ["Digoreng langsung", "Direbus heula sateuacan digoreng", "Dikukus heula", "Hancurkan tahu putih hingga halus dan peras untuk mengurangi kadar airnya"],
+        options: ["Digoreng langsung", "Direbus heula sateuacan digoreng", "Hancurkan tahu putih hingga halus dan peras untuk mengurangi kadar airnya"],
         answer: "Hancurkan tahu putih hingga halus dan peras untuk mengurangi kadar airnya",
         explanation: ""
     },
     {
         question: "Saha nu ngawanohkeun tahu bulat munggaran?",
-        options: ["Asep", "Saep Bani", "Kang Asep", "Ente Sutisna"],
+        options: ["Asep", "Saep Bani", "Ente Sutisna"],
         answer: "Saep Bani",
         explanation: "Saep Bani mangrupikeun tokoh anu ngawanohkeun tahu bulat ka masarakat luas ngaliwatan lagu viralna."
     },
     {
         question: "Dina taun sabaraha lagu Tahu Bulat viral?",
-        options: ["2013", "2014", "2015", "2016"],
+        options: ["2014", "2015", "2016"],
         answer: "2015",
         explanation: "Lagu Tahu Bulat viral dina taun 2015 sarta ngajadikeun jajanan ieu langkung populer deui."
     },
     {
         question: "Sabaraha harga standar tahu bulat per bijina?",
-        options: ["Rp 500", "Rp 1.000", "Rp 2.000", "Rp 5.000"],
+        options: ["Rp 500", "Rp 1.000", "Rp 2.000"],
         answer: "Rp 500",
         explanation: "Harga standar tahu bulat biasana dijual dina harga Rp 500 per biji, tapi bisa béda-béda gumantung kana lokasi."
     },
     {
         question: "Tahu bulat munggaran dikenal ti daérah mana?",
-        options: ["Bandung", "Yogyakarta", "Tasikmalaya", "Surabaya"],
+        options: ["Bandung", "Yogyakarta", "Tasikmalaya"],
         answer: "Tasikmalaya",
         explanation: "Tahu bulat mimitina populer ti daérah Tasikmalaya, Jawa Barat, sateuacan sumebar ka sakuliah Indonésia."
     },
