@@ -2259,7 +2259,7 @@ nav.scrolled {
     position: fixed;
     bottom: 20px;
     right: 15px;
-    z-index: 1000;
+    z-index: 10;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -2788,9 +2788,8 @@ footer {
         z-index: 1002;
         border-radius: 8px;
         padding: 8px;
-        background: rgba(255, 255, 255, 0.1);
+        background: transparent;
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
     }
     
     .nav-toggle i {
@@ -2800,7 +2799,7 @@ footer {
     }
 
     .nav-toggle:hover {
-        background: rgba(255, 255, 255, 0.2);
+        background: transparent;
         transform: scale(1.05);
     }
     
@@ -2816,6 +2815,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 2rem;
         opacity: 0;
         visibility: hidden;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -2829,25 +2829,36 @@ footer {
     
     .nav-links a {
         color: white !important;
-        font-size: 2.4rem;
-        margin: 1.5rem 0;
-        padding: 1.5rem 3rem;
+        font-size: 2rem;
+        margin: 0;
+        padding: 1.2rem 2.5rem;
         text-align: center;
-        border-radius: 15px;
+        border-radius: 12px;
         background: rgba(255, 255, 255, 0.1);
         border: 2px solid rgba(255, 255, 255, 0.2);
-        min-width: 200px;
+        min-width: 180px;
         transition: all 0.3s ease;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
+        transform: translateY(20px);
+        opacity: 0;
+        animation: fadeInSlide 0.5s ease forwards;
     }
+
+    .nav-links.active a:nth-child(1) { animation-delay: 0.1s; }
+    .nav-links.active a:nth-child(2) { animation-delay: 0.2s; }
+    .nav-links.active a:nth-child(3) { animation-delay: 0.3s; }
+    .nav-links.active a:nth-child(4) { animation-delay: 0.4s; }
+    .nav-links.active a:nth-child(5) { animation-delay: 0.5s; }
+    .nav-links.active a:nth-child(6) { animation-delay: 0.6s; }
     
     .nav-links a:hover {
         background: rgba(255, 183, 77, 0.3);
         border-color: var(--accent);
         transform: translateY(-3px);
         box-shadow: 0 5px 15px rgba(255, 183, 77, 0.3);
+        color: var(--accent) !important;
     }
 
     /* Hero Mobile */
@@ -2950,6 +2961,14 @@ footer {
         width: 55px;
         height: 55px;
         font-size: 1.4rem;
+    }
+}
+
+/* Animation for mobile menu items */
+@keyframes fadeInSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
