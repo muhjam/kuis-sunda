@@ -1224,14 +1224,14 @@ nav.scrolled {
     animation: floatRecipe 4s ease-in-out infinite;
 }
 
-.recipe-container:hover {
+/* .recipe-container:hover {
     transform: translateY(-5px);
     box-shadow: 
         0 35px 70px rgba(0, 0, 0, 0.4),
         0 15px 30px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.95);
     border-color: var(--accent);
-}
+} */
 
 .recipe-intro {
     text-align: center;
@@ -1291,10 +1291,10 @@ nav.scrolled {
     border: 2px solid rgba(255, 183, 77, 0.2);
     position: relative;
     overflow: hidden;
-    transition: all 0.4s ease;
+    /* transition: all 0.4s ease; */
 }
 
-.ingredients::before,
+/* .ingredients::before,
 .steps::before {
     content: '';
     position: absolute;
@@ -1306,21 +1306,21 @@ nav.scrolled {
     border-radius: 20px 20px 0 0;
     transform: scaleX(0);
     transition: transform 0.4s ease;
-}
+} */
 
 .ingredients:hover::before,
 .steps:hover::before {
     transform: scaleX(1);
 }
 
-.ingredients:hover,
+/* .ingredients:hover,
 .steps:hover {
     transform: translateY(-3px);
     box-shadow: 
         0 20px 40px rgba(93, 64, 55, 0.2),
         0 8px 20px rgba(0, 0, 0, 0.15);
     border-color: var(--accent);
-}
+} */
 
 .ingredients h3, .steps h3 {
     color: var(--primary-dark) !important;
@@ -1378,7 +1378,7 @@ nav.scrolled {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     border-left: 4px solid var(--accent);
     position: relative;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
     color: var(--text) !important;
 }
 
@@ -1387,7 +1387,7 @@ nav.scrolled {
     position: absolute;
     left: -8px;
     top: 50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     width: 24px;
     height: 24px;
     background: var(--accent);
@@ -1411,7 +1411,7 @@ nav.scrolled {
     position: absolute;
     left: -12px;
     top: 50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     width: 28px;
     height: 28px;
     background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
@@ -1426,12 +1426,12 @@ nav.scrolled {
     border: 2px solid white;
 }
 
-.ingredients li:hover,
+/* .ingredients li:hover,
 .steps li:hover {
     transform: translateX(5px);
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-}
+} */
 
 .recipe-tips {
     grid-column: 1 / -1;
