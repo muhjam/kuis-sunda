@@ -182,7 +182,7 @@ function randomFrom(array) {
 
 // ====== INI UNTUK PANGGIL GEMINI API ======
 async function callGeminiAPI(message) {
-    const API_KEY = 'AIzaSyCxcnolfhvVUHZnTkv4hy8HEVd36xBzMYQ';
+    const API_KEY = 'AIzaSyAY6w9VvsFgg0veaVzDnwqHHOj27REMxjU';
     const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
 
     const prompt = `
