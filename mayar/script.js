@@ -90,62 +90,17 @@ function startBackgroundMusic() {
 }
 
 // Player name variable
-let playerName = 'Tamu';
+let playerName = 'Tahu Bulat Lover';
 
-// Start the quiz after name input
+// Start the quiz automatically
 window.addEventListener('DOMContentLoaded', () => {
     startBackgroundMusic();
-    
-    // Show name input modal
+    // Hide the name input modal
     const nameModal = document.getElementById('name-modal');
-    const playerNameInput = document.getElementById('player-name');
-    const startQuizBtn = document.getElementById('start-quiz-btn');
+    if (nameModal) nameModal.style.display = 'none';
     
-    // Focus on input when modal opens
-    playerNameInput.focus();
-    
-    // Show error function
-    const showError = (message) => {
-        const errorElement = document.getElementById('name-error');
-        errorElement.textContent = message;
-        errorElement.classList.add('show');
-        playerNameInput.classList.add('error');
-    };
-
-    // Hide error function
-    const hideError = () => {
-        const errorElement = document.getElementById('name-error');
-        errorElement.classList.remove('show');
-        playerNameInput.classList.remove('error');
-    };
-
-    // Start quiz when clicking the button
-    startQuizBtn.addEventListener('click', () => {
-        const name = playerNameInput.value.trim();
-        if (name !== '') {
-            playerName = name;
-            nameModal.style.display = 'none';
-            hideError();
-            showRandomQuestion();
-        } else {
-            showError('Mangga lebetkeun nami anjeun sateuacan ngamimitian!');
-            playerNameInput.focus();
-        }
-    });
-
-    // Hide error when user starts typing
-    playerNameInput.addEventListener('input', () => {
-        if (playerNameInput.value.trim() !== '') {
-            hideError();
-        }
-    });
-    
-    // Also start on Enter key
-    playerNameInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            startQuizBtn.click();
-        }
-    });
+    // Start the quiz
+    showRandomQuestion();
 });
 
 // Show current question
