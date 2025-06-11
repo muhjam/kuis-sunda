@@ -107,12 +107,28 @@
 <script>
 window.TallyConfig = {
   "formId": "3jqzWQ",
+  "hideCloseButton": true,  // Hide the close button
+  "onClose": function() {
+    // Only allow closing if the form is submitted
+    if (!window.tallyFormSubmitted) {
+      return false; // Prevent closing
+    }
+    return true; // Allow closing after submission
+  },
+  "onSubmit": function() {
+    // Set a flag when form is submitted successfully
+    window.tallyFormSubmitted = true;
+  },
   "popup": {
     "emoji": {
       "text": "👋",
       "animation": "wave"
     },
-    "layout": "modal"
+    "layout": "modal",
+    "overlay": true,
+    "hideCloseButton": true,  // Also hide close button in popup settings
+    "keyboardClose": false,   // Prevent closing with ESC key
+    "autoClose": 0            // Don't auto-close after submission
   }
 };
 </script>
